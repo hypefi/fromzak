@@ -21,13 +21,14 @@ const Navigation = () => {
   }, []);
 
   const navItems = [
-    { name: 'Home', href: '#hero' },
-    { name: 'Photography', href: '#photography' },
-    { name: 'Coaching', href: '#coaching' },
-    { name: 'Packages', href: '#packages' },
-    { name: 'About', href: '#about' },
-    { name: 'Store', href: '#store' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Home', href: '/' },
+    { name: 'Photography', href: '/photography' },
+    { name: 'Coaching', href: '/coaching' },
+    { name: 'Packages', href: '/packages' },
+    { name: 'Gallery', href: '/gallery' },
+    { name: 'About', href: '/about' },
+    { name: 'Store', href: '/store' },
+    { name: 'Contact', href: '/contact' },
   ];
 
   return (
