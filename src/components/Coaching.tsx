@@ -54,7 +54,7 @@ const Coaching = () => {
     <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
       <div className="bg-white rounded-2xl p-8 max-w-md w-full max-h-[90vh] overflow-y-auto">
         <div className="flex justify-between items-center mb-6">
-          <h3 className="text-2xl font-poppins font-bold text-gray-900">Book Coaching Session</h3>
+          <h3 className="text-2xl font-righteous font-bold text-gray-900">Book Coaching Session</h3>
           <button
             onClick={() => setShowBookingForm(false)}
             className="text-gray-400 hover:text-gray-600"
@@ -140,7 +140,7 @@ const Coaching = () => {
             <Waves className="h-4 w-4" />
             <span>Surf Coaching</span>
           </div>
-          <h2 className="font-poppins font-bold text-4xl lg:text-5xl text-gray-900 mb-6">
+          <h2 className="font-righteous font-bold text-4xl lg:text-5xl text-gray-900 mb-6">
             Master Your Surfing Skills
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -158,7 +158,7 @@ const Coaching = () => {
                 <div className="w-16 h-16 bg-gradient-to-r from-teal-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <IconComponent className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="font-poppins font-semibold text-xl text-gray-900 mb-3">
+                <h3 className="font-righteous font-semibold text-xl text-gray-900 mb-3">
                   {feature.title}
                 </h3>
                 <p className="text-gray-600">
@@ -171,7 +171,7 @@ const Coaching = () => {
 
         {/* Skill Levels */}
         <div className="mb-16">
-          <h3 className="font-poppins font-bold text-3xl text-center text-gray-900 mb-12">
+          <h3 className="font-righteous font-bold text-3xl text-center text-gray-900 mb-12">
             Coaching for All Levels
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -179,7 +179,7 @@ const Coaching = () => {
               <div key={index} className="card-surf overflow-hidden">
                 <div className={`h-2 bg-gradient-to-r ${skill.color}`}></div>
                 <div className="p-6">
-                  <h4 className="font-poppins font-bold text-xl text-gray-900 mb-2">
+                  <h4 className="font-righteous font-bold text-xl text-gray-900 mb-2">
                     {skill.level}
                   </h4>
                   <p className="text-gray-600 mb-4">
@@ -204,7 +204,7 @@ const Coaching = () => {
         <div className="bg-gradient-to-br from-teal-50 to-blue-50 rounded-3xl p-8 lg:p-12">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h3 className="font-poppins font-bold text-3xl text-gray-900 mb-4">
+              <h3 className="font-righteous font-bold text-3xl text-gray-900 mb-4">
                 Private Surf Coaching
               </h3>
               <p className="text-gray-600">
@@ -220,7 +220,7 @@ const Coaching = () => {
                       <Waves className="h-6 w-6 text-white" />
                     </div>
                     <div>
-                      <h4 className="font-poppins font-bold text-2xl text-gray-900">
+                      <h4 className="font-righteous font-bold text-2xl text-gray-900">
                         Private Session
                       </h4>
                       <div className="flex items-center space-x-2 text-gray-600">

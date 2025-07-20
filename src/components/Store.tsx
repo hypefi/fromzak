@@ -128,7 +128,7 @@ const Store = () => {
             <ShoppingCart className="h-4 w-4" />
             <span>Surf Store</span>
           </div>
-          <h2 className="font-poppins font-bold text-4xl lg:text-5xl text-gray-900 mb-6">
+          <h2 className="font-righteous font-bold text-4xl lg:text-5xl text-gray-900 mb-6">
             Surf Lifestyle Collection
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -185,7 +185,7 @@ const Store = () => {
               
               <div className="p-6">
                 <div className="flex items-center justify-between mb-2">
-                  <h3 className="font-poppins font-semibold text-lg text-gray-900">
+                  <h3 className="font-righteous font-semibold text-lg text-gray-900">
                     {product.name}
                   </h3>
                   <div className="text-right">
@@ -268,7 +268,7 @@ const Store = () => {
         {/* Store Info */}
         <div className="mt-20 bg-white rounded-3xl p-8 lg:p-12 shadow-xl">
           <div className="text-center mb-12">
-            <h3 className="font-poppins font-bold text-3xl text-gray-900 mb-4">
+            <h3 className="font-righteous font-bold text-3xl text-gray-900 mb-4">
               About Our Store
             </h3>
             <p className="text-gray-600 max-w-3xl mx-auto">
@@ -282,7 +282,7 @@ const Store = () => {
               <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Package className="h-8 w-8 text-white" />
               </div>
-              <h4 className="font-poppins font-semibold text-lg text-gray-900 mb-2">
+              <h4 className="font-righteous font-semibold text-lg text-gray-900 mb-2">
                 Free Shipping
               </h4>
               <p className="text-gray-600">
@@ -293,7 +293,7 @@ const Store = () => {
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Camera className="h-8 w-8 text-white" />
               </div>
-              <h4 className="font-poppins font-semibold text-lg text-gray-900 mb-2">
+              <h4 className="font-righteous font-semibold text-lg text-gray-900 mb-2">
                 Original Photography
               </h4>
               <p className="text-gray-600">
@@ -304,7 +304,7 @@ const Store = () => {
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Star className="h-8 w-8 text-white" />
               </div>
-              <h4 className="font-poppins font-semibold text-lg text-gray-900 mb-2">
+              <h4 className="font-righteous font-semibold text-lg text-gray-900 mb-2">
                 Premium Quality
               </h4>
               <p className="text-gray-600">

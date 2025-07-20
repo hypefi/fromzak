@@ -93,7 +93,7 @@ const Activities = () => {
             <Users className="h-4 w-4" />
             <span>Collaborations & Activities</span>
           </div>
-          <h2 className="font-poppins font-bold text-4xl lg:text-5xl text-gray-900 mb-6">
+          <h2 className="font-righteous font-bold text-4xl lg:text-5xl text-gray-900 mb-6">
             Building Surf Community
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -121,7 +121,7 @@ const Activities = () => {
                       <IconComponent className="h-6 w-6 text-white" />
                     </div>
                     <div>
-                      <h3 className="font-poppins font-semibold text-xl text-gray-900">
+                      <h3 className="font-righteous font-semibold text-xl text-gray-900">
                         {collab.title}
                       </h3>
                       <span className="text-emerald-600 font-medium">{collab.stats}</span>
@@ -139,7 +139,7 @@ const Activities = () => {
         {/* Upcoming Events */}
         <div className="mb-20">
           <div className="text-center mb-12">
-            <h3 className="font-poppins font-bold text-3xl text-gray-900 mb-4">
+            <h3 className="font-righteous font-bold text-3xl text-gray-900 mb-4">
               Upcoming Events
             </h3>
             <p className="text-gray-600">
@@ -156,7 +156,7 @@ const Activities = () => {
                       <Calendar className="h-6 w-6 text-white" />
                     </div>
                     <div>
-                      <h4 className="font-poppins font-semibold text-xl text-gray-900 mb-1">
+                      <h4 className="font-righteous font-semibold text-xl text-gray-900 mb-1">
                         {event.title}
                       </h4>
                       <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4 space-y-1 sm:space-y-0 text-gray-600">
@@ -194,7 +194,7 @@ const Activities = () => {
         {/* Partners */}
         <div className="bg-gray-50 rounded-3xl p-8 lg:p-12">
           <div className="text-center mb-12">
-            <h3 className="font-poppins font-bold text-3xl text-gray-900 mb-4">
+            <h3 className="font-righteous font-bold text-3xl text-gray-900 mb-4">
               Trusted Partners
             </h3>
             <p className="text-gray-600">
@@ -212,7 +212,7 @@ const Activities = () => {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <h4 className="font-poppins font-semibold text-gray-900 mb-1">
+                <h4 className="font-righteous font-semibold text-gray-900 mb-1">
                   {partner.name}
                 </h4>
                 <span className="text-sm text-gray-600">{partner.type}</span>
@@ -224,7 +224,7 @@ const Activities = () => {
         {/* Call to Action */}
         <div className="mt-20 text-center">
           <div className="bg-gradient-to-br from-teal-50 to-blue-50 rounded-3xl p-8 lg:p-12">
-            <h3 className="font-poppins font-bold text-3xl text-gray-900 mb-4">
+            <h3 className="font-righteous font-bold text-3xl text-gray-900 mb-4">
               Want to Collaborate?
             </h3>
             <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">

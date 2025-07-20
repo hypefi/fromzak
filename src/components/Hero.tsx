@@ -72,7 +72,7 @@ const Hero = () => {
               </div>
 
               {/* Main Content */}
-              <h1 className="font-poppins font-bold text-4xl md:text-6xl lg:text-7xl text-white mb-6 leading-tight">
+              <h1 className="font-righteous font-bold text-4xl md:text-6xl lg:text-7xl text-white mb-6 leading-tight">
                 {heroSlides[currentSlide].title}
               </h1>
               

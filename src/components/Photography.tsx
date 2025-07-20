@@ -60,7 +60,7 @@ const Photography = () => {
     <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
       <div className="bg-white rounded-2xl p-8 max-w-md w-full max-h-[90vh] overflow-y-auto">
         <div className="flex justify-between items-center mb-6">
-          <h3 className="text-2xl font-poppins font-bold text-gray-900">Book Photography Session</h3>
+          <h3 className="text-2xl font-righteous font-bold text-gray-900">Book Photography Session</h3>
           <button
             onClick={() => setShowBookingForm(false)}
             className="text-gray-400 hover:text-gray-600"
@@ -147,7 +147,7 @@ const Photography = () => {
             <Camera className="h-4 w-4" />
             <span>Photography Services</span>
           </div>
-          <h2 className="font-poppins font-bold text-4xl lg:text-5xl text-gray-900 mb-6">
+          <h2 className="font-righteous font-bold text-4xl lg:text-5xl text-gray-900 mb-6">
             Capture Your Surf Story
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -164,7 +164,7 @@ const Photography = () => {
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-teal-500 rounded-xl flex items-center justify-center mb-4">
                   <IconComponent className="h-6 w-6 text-white" />
                 </div>
-                <h3 className="font-poppins font-semibold text-xl text-gray-900 mb-3">
+                <h3 className="font-righteous font-semibold text-xl text-gray-900 mb-3">
                   {service.title}
                 </h3>
                 <p className="text-gray-600 mb-4">
@@ -186,7 +186,7 @@ const Photography = () => {
         {/* Pricing Section */}
         <div className="bg-white rounded-3xl p-8 lg:p-12 shadow-xl">
           <div className="text-center mb-12">
-            <h3 className="font-poppins font-bold text-3xl text-gray-900 mb-4">
+            <h3 className="font-righteous font-bold text-3xl text-gray-900 mb-4">
               Photography Pricing
             </h3>
             <p className="text-gray-600">
@@ -213,7 +213,7 @@ const Photography = () => {
                 )}
                 
                 <div className="text-center">
-                  <h4 className="font-poppins font-bold text-2xl text-gray-900 mb-2">
+                  <h4 className="font-righteous font-bold text-2xl text-gray-900 mb-2">
                     {option.type}
                   </h4>
                   <div className="flex items-center justify-center space-x-2 mb-4">

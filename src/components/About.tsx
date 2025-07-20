@@ -72,7 +72,7 @@ const About = () => {
             <Star className="h-4 w-4" />
             <span>About Zak</span>
           </div>
-          <h2 className="font-poppins font-bold text-4xl lg:text-5xl text-gray-900 mb-6">
+          <h2 className="font-righteous font-bold text-4xl lg:text-5xl text-gray-900 mb-6">
             Meet Your Photographer & Coach
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -103,7 +103,7 @@ const About = () => {
 
           {/* Content */}
           <div className="space-y-6">
-            <h3 className="font-poppins font-bold text-3xl text-gray-900">
+            <h3 className="font-righteous font-bold text-3xl text-gray-900">
               Zak Radmi
             </h3>
             <div className="flex items-center space-x-2 text-teal-600">
@@ -135,7 +135,7 @@ const About = () => {
 
             {/* Certifications */}
             <div className="bg-white rounded-2xl p-6 shadow-lg">
-              <h4 className="font-poppins font-semibold text-lg text-gray-900 mb-4">
+              <h4 className="font-righteous font-semibold text-lg text-gray-900 mb-4">
                 Certifications & Qualifications
               </h4>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -159,7 +159,7 @@ const About = () => {
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-teal-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <IconComponent className="h-8 w-8 text-white" />
                 </div>
-                <div className="font-poppins font-bold text-3xl text-gray-900 mb-2">
+                <div className="font-righteous font-bold text-3xl text-gray-900 mb-2">
                   {achievement.number}
                 </div>
                 <div className="font-semibold text-gray-900 mb-1">
@@ -176,7 +176,7 @@ const About = () => {
         {/* Skills */}
         <div className="bg-white rounded-3xl p-8 lg:p-12 shadow-xl">
           <div className="text-center mb-12">
-            <h3 className="font-poppins font-bold text-3xl text-gray-900 mb-4">
+            <h3 className="font-righteous font-bold text-3xl text-gray-900 mb-4">
               Expertise & Skills
             </h3>
             <p className="text-gray-600">
@@ -194,7 +194,7 @@ const About = () => {
                       <IconComponent className="h-6 w-6 text-white" />
                     </div>
                     <div className="flex-1">
-                      <h4 className="font-poppins font-semibold text-lg text-gray-900">
+                      <h4 className="font-righteous font-semibold text-lg text-gray-900">
                         {skill.title}
                       </h4>
                       <p className="text-gray-600">{skill.description}</p>
@@ -218,7 +218,7 @@ const About = () => {
         {/* Philosophy */}
         <div className="mt-20 text-center">
           <div className="max-w-4xl mx-auto">
-            <h3 className="font-poppins font-bold text-3xl text-gray-900 mb-8">
+            <h3 className="font-righteous font-bold text-3xl text-gray-900 mb-8">
               My Philosophy
             </h3>
             <blockquote className="text-2xl italic text-gray-700 leading-relaxed mb-8">
@@ -229,7 +229,7 @@ const About = () => {
               <div className="flex items-center space-x-4">
                 <div className="w-1 h-16 bg-gradient-to-b from-teal-500 to-blue-500 rounded-full"></div>
                 <div className="text-left">
-                  <div className="font-poppins font-bold text-xl text-gray-900">Zak Radmi</div>
+                  <div className="font-righteous font-bold text-xl text-gray-900">Zak Radmi</div>
                   <div className="text-gray-600">Professional Surf Photographer & Coach</div>
                 </div>
               </div>

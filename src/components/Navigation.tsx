@@ -46,7 +46,7 @@ const Navigation = () => {
             <div className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-r from-blue-600 to-teal-600">
               <Waves className="h-6 w-6 text-white" />
             </div>
-            <span className="font-poppins font-bold text-xl text-gray-900">
+            <span className="font-righteous font-bold text-xl text-gray-900">
               Zak Radmi
             </span>
           </Link>

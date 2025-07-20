@@ -1,17 +1,18 @@
 import type { Metadata } from "next";
-import { Inter, Poppins } from "next/font/google";
+import { Righteous, Nunito } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
-const inter = Inter({
-  variable: "--font-inter",
+const righteous = Righteous({
+  variable: "--font-righteous",
   subsets: ["latin"],
+  weight: ['400'],
   display: 'swap',
 });
 
-const poppins = Poppins({
-  variable: "--font-poppins",
+const nunito = Nunito({
+  variable: "--font-nunito",
   subsets: ["latin"],
   weight: ['300', '400', '500', '600', '700', '800'],
   display: 'swap',
@@ -46,7 +47,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${poppins.variable} antialiased`}>
+      <body className={`${righteous.variable} ${nunito.variable} antialiased`}>
         <Navigation />
         <main>{children}</main>
         <Footer />

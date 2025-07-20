@@ -40,7 +40,7 @@ const Footer = () => {
                 <Waves className="h-7 w-7 text-white" />
               </div>
               <div>
-                <h3 className="font-poppins font-bold text-xl">Zak Radmi</h3>
+                <h3 className="font-righteous font-bold text-xl">Zak Radmi</h3>
                 <p className="text-blue-200 text-sm">Surf Photographer & Coach</p>
               </div>
             </div>
@@ -70,7 +70,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-poppins font-semibold text-lg mb-6">Quick Links</h4>
+            <h4 className="font-righteous font-semibold text-lg mb-6">Quick Links</h4>
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.name}>
@@ -88,7 +88,7 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h4 className="font-poppins font-semibold text-lg mb-6">Services</h4>
+            <h4 className="font-righteous font-semibold text-lg mb-6">Services</h4>
             <ul className="space-y-3">
               {services.map((service) => (
                 <li key={service.name}>
@@ -106,7 +106,7 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h4 className="font-poppins font-semibold text-lg mb-6">Get in Touch</h4>
+            <h4 className="font-righteous font-semibold text-lg mb-6">Get in Touch</h4>
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-teal-400 mt-1 flex-shrink-0" />

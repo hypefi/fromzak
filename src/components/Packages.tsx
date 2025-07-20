@@ -85,7 +85,7 @@ const Packages = () => {
     <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
       <div className="bg-white rounded-2xl p-8 max-w-md w-full max-h-[90vh] overflow-y-auto">
         <div className="flex justify-between items-center mb-6">
-          <h3 className="text-2xl font-poppins font-bold text-gray-900">Book Package</h3>
+          <h3 className="text-2xl font-righteous font-bold text-gray-900">Book Package</h3>
           <button
             onClick={() => setShowBookingForm(false)}
             className="text-gray-400 hover:text-gray-600"
@@ -192,7 +192,7 @@ const Packages = () => {
             <Star className="h-4 w-4" />
             <span>LaCrique Surf House Packages</span>
           </div>
-          <h2 className="font-poppins font-bold text-4xl lg:text-5xl text-gray-900 mb-6">
+          <h2 className="font-righteous font-bold text-4xl lg:text-5xl text-gray-900 mb-6">
             Complete Surf Packages
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -228,7 +228,7 @@ const Packages = () => {
                       <IconComponent className="h-6 w-6 text-white" />
                     </div>
                     <div>
-                      <h3 className="font-poppins font-bold text-xl text-gray-900">
+                      <h3 className="font-righteous font-bold text-xl text-gray-900">
                         {pkg.name}
                       </h3>
                       <p className="text-gray-600 text-sm">{pkg.description}</p>
@@ -270,7 +270,7 @@ const Packages = () => {
         {/* Add-on Services */}
         <div className="bg-white rounded-3xl p-8 lg:p-12 shadow-xl">
           <div className="text-center mb-12">
-            <h3 className="font-poppins font-bold text-3xl text-gray-900 mb-4">
+            <h3 className="font-righteous font-bold text-3xl text-gray-900 mb-4">
               Add-on Services
             </h3>
             <p className="text-gray-600">
@@ -290,7 +290,7 @@ const Packages = () => {
                     
                     <div className="flex-1">
                       <div className="flex items-center justify-between mb-4">
-                        <h4 className="font-poppins font-bold text-xl text-gray-900">
+                        <h4 className="font-righteous font-bold text-xl text-gray-900">
                           {service.name}
                         </h4>
                         <div className="text-right">
@@ -326,7 +326,7 @@ const Packages = () => {
 
         {/* Package Benefits */}
         <div className="mt-16 text-center">
-          <h3 className="font-poppins font-bold text-2xl text-gray-900 mb-8">
+          <h3 className="font-righteous font-bold text-2xl text-gray-900 mb-8">
             Why Choose Our Packages?
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -334,7 +334,7 @@ const Packages = () => {
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="h-8 w-8 text-white" />
               </div>
-              <h4 className="font-poppins font-semibold text-lg text-gray-900 mb-2">
+              <h4 className="font-righteous font-semibold text-lg text-gray-900 mb-2">
                 Group Friendly
               </h4>
               <p className="text-gray-600">
@@ -345,7 +345,7 @@ const Packages = () => {
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Clock className="h-8 w-8 text-white" />
               </div>
-              <h4 className="font-poppins font-semibold text-lg text-gray-900 mb-2">
+              <h4 className="font-righteous font-semibold text-lg text-gray-900 mb-2">
                 All Day Coverage
               </h4>
               <p className="text-gray-600">
@@ -356,7 +356,7 @@ const Packages = () => {
               <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Star className="h-8 w-8 text-white" />
               </div>
-              <h4 className="font-poppins font-semibold text-lg text-gray-900 mb-2">
+              <h4 className="font-righteous font-semibold text-lg text-gray-900 mb-2">
                 Professional Quality
               </h4>
               <p className="text-gray-600">
