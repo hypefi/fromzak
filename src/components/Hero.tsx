@@ -112,13 +112,7 @@ const Hero = () => {
             <div className="absolute inset-0 bg-black/30"></div>
           </div>
         ))}
-        
-        {/* Animated wave overlays */}
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-1/4 left-0 w-full h-64 bg-gradient-to-r from-transparent via-white to-transparent transform -skew-y-1 wave-animation"></div>
-          <div className="absolute top-1/2 right-0 w-full h-48 bg-gradient-to-l from-transparent via-blue-200 to-transparent transform skew-y-1 wave-animation" style={{ animationDelay: '1s' }}></div>
-          <div className="absolute bottom-1/4 left-0 w-full h-56 bg-gradient-to-r from-transparent via-teal-200 to-transparent transform -skew-y-1 wave-animation" style={{ animationDelay: '2s' }}></div>
-        </div>
+
       </div>
 
       {/* Content */}
