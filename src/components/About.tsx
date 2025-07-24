@@ -11,21 +11,21 @@ const About = () => {
     },
     {
       icon: Users,
-      number: '500+',
+      number: '200+',
       label: 'Happy Clients',
       description: 'Surfers from around the world'
     },
     {
       icon: Waves,
-      number: '10+',
+      number: '4+',
       label: 'Years Experience',
       description: 'In surf photography and coaching'
     },
     {
-      icon: Award,
-      number: '50+',
-      label: 'Competitions',
-      description: 'Documented and coached'
+      icon: MapPin,
+      number: '10+',
+      label: 'Surf Spots',
+      description: 'Discovered around Morocco'
     }
   ];
 
@@ -57,10 +57,8 @@ const About = () => {
   ];
 
   const certifications = [
-    'ISA Level 2 Surf Instructor',
     'Water Safety & Rescue Certified',
-    'Professional Photography Certification',
-    'First Aid & CPR Certified'
+    'Professional Photography Certification'
   ];
 
   return (
@@ -104,32 +102,35 @@ const About = () => {
           {/* Content */}
           <div className="space-y-6">
             <h3 className="font-righteous font-bold text-3xl text-gray-900">
-              Zak Radmi
+              Zakaria Radmi
             </h3>
             <div className="flex items-center space-x-2 text-teal-600">
               <MapPin className="h-5 w-5" />
-              <span className="font-medium">Based in Taghazout & Agadir, Morocco</span>
+              <span className="font-medium">20 years old • Based in Taghazout & Agadir, Morocco</span>
             </div>
             
             <div className="space-y-4 text-gray-700 leading-relaxed">
               <p>
-                With over 10 years of experience in the surf industry, I've dedicated my life to capturing 
-                the raw beauty and power of surfing while helping others improve their skills in the water. 
-                Born and raised in Morocco, I have an intimate knowledge of our coastline's hidden gems and 
-                perfect surf conditions.
+                My name is Zakaria Radmi, I'm 20 years old, I'm a photographer, surfer and coach, born and raised by the ocean.
+                Since I was little, I've always had a passion for images, movement and emotions. Today, I'm lucky to live between these three worlds — capturing real moments, sharing my knowledge and motivating others to step out of their comfort zone.
               </p>
               
               <p>
-                My journey began as a passionate surfer who wanted to document the incredible surf culture 
-                in Morocco. Over the years, I've evolved into a professional photographer and certified 
-                surf instructor, combining my two greatest passions to offer unique experiences for surfers 
-                from around the world.
+                Through photography, I seek to reveal the energy, personality, and unique light of each person. I have my own vision of the image: natural, spontaneous, full of vibes. I love photographing people in action, in connection with the sea, or simply in their element.
               </p>
               
               <p>
-                Whether you're looking to capture your perfect wave or improve your surfing technique, 
-                I bring a combination of technical expertise, local knowledge, and genuine passion for 
-                the sport to every session.
+                As a coach, I help those who want to learn to surf, progress technically, but also reconnect with themselves and the ocean. Because yes, catching your first wave isn't just a matter of technique — it's also a story of confidence, sensations, listening. I work as much on technique as on the mental and feeling aspects.
+              </p>
+
+              <p>
+                I also organize surf trips around Morocco, to explore the best spots, meet beautiful people and live unforgettable experiences.
+              </p>
+
+              <p>
+                I created this site to bring together a community of people as passionate as me.
+                Whether you come for a photo, a surf lesson, or just to share a vibe, welcome to my universe.
+                Let's go 🌊📸
               </p>
             </div>
 
@@ -222,15 +223,16 @@ const About = () => {
               My Philosophy
             </h3>
             <blockquote className="text-2xl italic text-gray-700 leading-relaxed mb-8">
-              "Every wave tells a story, every surfer has a unique style. My job is to capture that 
-              story and help you write new chapters in your surfing journey."
+              "I believe that every person has their own unique energy and light. My mission is to capture 
+              that authenticity — whether through the lens or in the water — and help people connect with 
+              their true selves and the ocean."
             </blockquote>
             <div className="flex justify-center">
               <div className="flex items-center space-x-4">
                 <div className="w-1 h-16 bg-gradient-to-b from-teal-500 to-blue-500 rounded-full"></div>
                 <div className="text-left">
-                  <div className="font-righteous font-bold text-xl text-gray-900">Zak Radmi</div>
-                  <div className="text-gray-600">Professional Surf Photographer & Coach</div>
+                  <div className="font-righteous font-bold text-xl text-gray-900">Zakaria Radmi</div>
+                  <div className="text-gray-600">Photographer, Surfer & Coach</div>
                 </div>
               </div>
             </div>
