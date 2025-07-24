@@ -56,87 +56,169 @@ const Photography = () => {
     }
   ];
 
-  const BookingForm = () => (
-    <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-      <div className="bg-white rounded-2xl p-8 max-w-md w-full max-h-[90vh] overflow-y-auto">
-        <div className="flex justify-between items-center mb-6">
-          <h3 className="text-2xl font-righteous font-bold text-gray-900">Book Photography Session</h3>
-          <button
-            onClick={() => setShowBookingForm(false)}
-            className="text-gray-400 hover:text-gray-600"
-          >
-            ✕
-          </button>
+  const BookingForm = () => {
+    const [formData, setFormData] = useState({
+      fullName: '',
+      country: '',
+      language: '',
+      serviceType: '',
+      preferredDate: '',
+      additionalNotes: ''
+    });
+
+    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+      const { name, value } = e.target;
+      setFormData(prev => ({
+        ...prev,
+        [name]: value
+      }));
+    };
+
+    const getServiceName = (serviceId: string) => {
+      const serviceNames = {
+        'private': 'Private Session (300 DH / €30)',
+        'group': 'Group Session (150 DH / €15 per person)',
+        'freelance': 'Freelance Photography',
+        'videography': 'Video Graphy'
+      };
+      return serviceNames[serviceId as keyof typeof serviceNames] || serviceId;
+    };
+
+    const handleSubmit = (e: React.FormEvent) => {
+      e.preventDefault();
+      
+      // Format the WhatsApp message
+      const message = `Hi Zak! I'd like to book a photography session.
+
+📸 Photography Booking Details:
+👤 Name: ${formData.fullName}
+🌍 Country: ${formData.country}
+🗣️ Language: ${formData.language}
+📋 Service Type: ${getServiceName(formData.serviceType)}
+📅 Preferred Date: ${formData.preferredDate}
+📝 Additional Notes: ${formData.additionalNotes || 'None'}
+
+Looking forward to capturing amazing surf moments with you!`;
+
+      // Encode the message for URL
+      const encodedMessage = encodeURIComponent(message);
+      
+      // Open WhatsApp with the message
+      window.open(`https://wa.me/212671142448?text=${encodedMessage}`, '_blank');
+      
+      // Close the form
+      setShowBookingForm(false);
+    };
+
+    return (
+      <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+        <div className="bg-white rounded-2xl p-8 max-w-md w-full max-h-[90vh] overflow-y-auto">
+          <div className="flex justify-between items-center mb-6">
+            <h3 className="text-2xl font-righteous font-bold text-gray-900">Book Photography Session</h3>
+            <button
+              onClick={() => setShowBookingForm(false)}
+              className="text-gray-400 hover:text-gray-600"
+            >
+              ✕
+            </button>
+          </div>
+          
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+              <input
+                type="text"
+                name="fullName"
+                value={formData.fullName}
+                onChange={handleInputChange}
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                placeholder="Your full name"
+                required
+              />
+            </div>
+            
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Country</label>
+              <input
+                type="text"
+                name="country"
+                value={formData.country}
+                onChange={handleInputChange}
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                placeholder="Your country"
+                required
+              />
+            </div>
+            
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Language</label>
+              <select 
+                name="language"
+                value={formData.language}
+                onChange={handleInputChange}
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                required
+              >
+                <option value="">Select language</option>
+                <option value="english">English</option>
+                <option value="french">French</option>
+                <option value="arabic">Arabic</option>
+                <option value="spanish">Spanish</option>
+              </select>
+            </div>
+            
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Service Type</label>
+              <select 
+                name="serviceType"
+                value={formData.serviceType}
+                onChange={handleInputChange}
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                required
+              >
+                <option value="">Select service</option>
+                <option value="private">Private Session (300 DH / €30)</option>
+                <option value="group">Group Session (150 DH / €15 per person)</option>
+                <option value="freelance">Freelance Photography</option>
+                <option value="videography">Video Graphy</option>
+              </select>
+            </div>
+            
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Preferred Date</label>
+              <input
+                type="date"
+                name="preferredDate"
+                value={formData.preferredDate}
+                onChange={handleInputChange}
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                required
+              />
+            </div>
+            
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Additional Notes</label>
+              <textarea
+                name="additionalNotes"
+                value={formData.additionalNotes}
+                onChange={handleInputChange}
+                rows={3}
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                placeholder="Any special requirements or questions..."
+              ></textarea>
+            </div>
+            
+            <button
+              type="submit"
+              className="w-full btn-ocean"
+            >
+              Book Session
+            </button>
+          </form>
         </div>
-        
-        <form className="space-y-4">
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
-            <input
-              type="text"
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              placeholder="Your full name"
-            />
-          </div>
-          
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">Country</label>
-            <input
-              type="text"
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              placeholder="Your country"
-            />
-          </div>
-          
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">Language</label>
-            <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
-              <option value="">Select language</option>
-              <option value="english">English</option>
-              <option value="french">French</option>
-              <option value="arabic">Arabic</option>
-              <option value="spanish">Spanish</option>
-            </select>
-          </div>
-          
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">Service Type</label>
-            <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
-              <option value="">Select service</option>
-              <option value="private">Private Session (300 DH / €30)</option>
-              <option value="group">Group Session (150 DH / €15 per person)</option>
-              <option value="freelance">Freelance Photography</option>
-              <option value="videography">Video Graphy</option>
-            </select>
-          </div>
-          
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">Preferred Date</label>
-            <input
-              type="date"
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-            />
-          </div>
-          
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">Additional Notes</label>
-            <textarea
-              rows={3}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              placeholder="Any special requirements or questions..."
-            ></textarea>
-          </div>
-          
-          <button
-            type="submit"
-            className="w-full btn-ocean"
-          >
-            Book Session
-          </button>
-        </form>
       </div>
-    </div>
-  );
+    );
+  };
 
   return (
     <section id="photography" className="py-20 bg-gray-50">
