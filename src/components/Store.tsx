@@ -50,11 +50,11 @@ const Store = () => {
     },
     {
       id: 3,
-      name: 'Taghazout Sunset Hoodie',
+      name: 'Bouznika Sunset Hoodie',
       price: 45,
       category: 'apparel',
       image: 'https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=400&h=400&fit=crop',
-      description: 'Comfortable hoodie featuring stunning Taghazout sunset',
+      description: 'Comfortable hoodie featuring stunning Bouznika sunset',
       sizes: ['S', 'M', 'L', 'XL'],
       rating: 4.7,
       reviews: 67

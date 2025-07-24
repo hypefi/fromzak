@@ -21,7 +21,7 @@ const nunito = Nunito({
 export const metadata: Metadata = {
   title: "Zak Radmi - Surf Photography & Coaching | Morocco",
   description: "Professional surf photographer and coach in Morocco. Book surf coaching sessions, photography services, and Morocco surf trip guidance. Capture your perfect wave with Zak Radmi.",
-  keywords: "surf photography, surf coaching, Morocco surf, surf trip guide, photography sessions, surf lessons, Taghazout, Agadir, surf camp",
+      keywords: "surf photography, surf coaching, Morocco surf, surf trip guide, photography sessions, surf lessons, Bouznika, surf camp",
   authors: [{ name: "Zak Radmi" }],
   openGraph: {
     title: "Zak Radmi - Surf Photography & Coaching",

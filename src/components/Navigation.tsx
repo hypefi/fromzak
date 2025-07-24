@@ -2,11 +2,16 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { Menu, X, Waves, Phone } from 'lucide-react';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const pathname = usePathname();
+  
+  // Check if we're on the home page
+  const isHomePage = pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,10 +36,39 @@ const Navigation = () => {
     { name: 'Contact', href: '/contact' },
   ];
 
+  // Determine text color based on page and scroll state
+  const getTextColor = () => {
+    if (isHomePage) {
+      // Home page: white when not scrolled, dark when scrolled
+      return isScrolled
+        ? 'text-gray-700 hover:text-blue-600'
+        : 'text-white hover:text-blue-200';
+    } else {
+      // Other pages: always dark text since they have white backgrounds
+      return 'text-gray-700 hover:text-blue-600';
+    }
+  };
+
+  const getLogoTextColor = () => {
+    if (isHomePage) {
+      return isScrolled ? 'text-gray-900' : 'text-white';
+    } else {
+      return 'text-gray-900';
+    }
+  };
+
+  const getMobileButtonColor = () => {
+    if (isHomePage) {
+      return isScrolled ? 'text-gray-700' : 'text-white';
+    } else {
+      return 'text-gray-700';
+    }
+  };
+
   return (
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled
+        isScrolled || !isHomePage
           ? 'bg-white/95 backdrop-blur-md shadow-lg'
           : 'bg-transparent'
       }`}
@@ -46,7 +80,7 @@ const Navigation = () => {
             <div className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-r from-blue-600 to-teal-600">
               <Waves className="h-6 w-6 text-white" />
             </div>
-            <span className="font-righteous font-bold text-xl text-gray-900">
+            <span className={`font-righteous font-bold text-xl ${getLogoTextColor()}`}>
               Zak Radmi
             </span>
           </Link>
@@ -57,11 +91,7 @@ const Navigation = () => {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`font-medium transition-colors duration-200 ${
-                  isScrolled
-                    ? 'text-gray-700 hover:text-blue-600'
-                    : 'text-white hover:text-blue-200'
-                }`}
+                className={`font-medium transition-colors duration-200 ${getTextColor()}`}
               >
                 {item.name}
               </Link>
@@ -85,9 +115,7 @@ const Navigation = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className={`p-2 rounded-md ${
-                isScrolled ? 'text-gray-700' : 'text-white'
-              }`}
+              className={`p-2 rounded-md ${getMobileButtonColor()}`}
             >
               {isMenuOpen ? (
                 <X className="h-6 w-6" />

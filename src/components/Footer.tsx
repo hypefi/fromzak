@@ -110,7 +110,7 @@ const Footer = () => {
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-teal-400 mt-1 flex-shrink-0" />
-                <span className="text-gray-300">Morocco, Taghazout & Agadir Region</span>
+                <span className="text-gray-300">Morocco, Bouznika Region</span>
               </div>
               <a
                 href="https://wa.me/212671142448"
@@ -155,9 +155,16 @@ const Footer = () => {
               <span className="hidden md:inline">All rights reserved.</span>
             </div>
             <div className="flex items-center space-x-2 text-gray-300">
-              <span>Made with</span>
-              <Heart className="h-4 w-4 text-red-400" />
-              <span>for surfers by surfers</span>
+              <a
+                href="https://instagram.com/quantum_names"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center space-x-2 hover:text-white transition-colors duration-200"
+              >
+                <span>Made with</span>
+                <Heart className="h-4 w-4 text-red-400" />
+                <span>for surfers by surfers</span>
+              </a>
             </div>
           </div>
         </div>

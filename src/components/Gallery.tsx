@@ -33,7 +33,7 @@ const Gallery = () => {
       type: 'image',
       category: 'action',
       title: 'Perfect Barrel',
-      description: 'Captured at Anchor Point, Taghazout',
+      description: 'Captured at Anchor Point, Bouznika',
       thumbnail: '/images/gallery/IMG_2104.JPG',
       fullImage: '/images/gallery/IMG_2104.JPG'
     },
@@ -88,7 +88,7 @@ const Gallery = () => {
       type: 'image',
       category: 'lifestyle',
       title: 'Sunset Session',
-      description: 'Golden hour at Taghazout Beach',
+      description: 'Golden hour at Bouznika Beach',
       thumbnail: '/images/gallery/IMG_2112.JPG',
       fullImage: '/images/gallery/IMG_2112.JPG'
     },

@@ -41,7 +41,7 @@ const Activities = () => {
     {
       date: 'March 15-17, 2024',
       title: 'Morocco Surf Championship',
-      location: 'Taghazout Beach',
+      location: 'Bouznika Beach',
       role: 'Official Photographer',
       status: 'confirmed'
     },
@@ -68,7 +68,7 @@ const Activities = () => {
       type: 'Official Partner'
     },
     {
-      name: 'Taghazout Surf School',
+      name: 'Bouznika Surf School',
       logo: 'https://images.unsplash.com/photo-1483721310020-03333e577078?w=100&h=100&fit=crop',
       type: 'Education Partner'
     },

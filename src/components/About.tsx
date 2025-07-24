@@ -106,7 +106,7 @@ const About = () => {
             </h3>
             <div className="flex items-center space-x-2 text-teal-600">
               <MapPin className="h-5 w-5" />
-              <span className="font-medium">20 years old • Based in Taghazout & Agadir, Morocco</span>
+              <span className="font-medium">20 years old • Based in Bouznika, Morocco</span>
             </div>
             
             <div className="space-y-4 text-gray-700 leading-relaxed">
