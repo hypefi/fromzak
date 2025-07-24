@@ -81,107 +81,201 @@ const Packages = () => {
     }
   ];
 
-  const BookingForm = () => (
-    <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-      <div className="bg-white rounded-2xl p-8 max-w-md w-full max-h-[90vh] overflow-y-auto">
-        <div className="flex justify-between items-center mb-6">
-          <h3 className="text-2xl font-righteous font-bold text-gray-900">Book Package</h3>
-          <button
-            onClick={() => setShowBookingForm(false)}
-            className="text-gray-400 hover:text-gray-600"
-          >
-            ✕
-          </button>
+  const BookingForm = () => {
+    const [formData, setFormData] = useState({
+      fullName: '',
+      country: '',
+      language: '',
+      package: '',
+      numberOfPeople: '',
+      numberOfDays: '',
+      startDate: '',
+      specialRequests: ''
+    });
+
+    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+      const { name, value } = e.target;
+      setFormData(prev => ({
+        ...prev,
+        [name]: value
+      }));
+    };
+
+    const getPackageName = (packageId: string) => {
+      const packageNames = {
+        'pack1': 'Pack 1 - Photos Only ($10/day)',
+        'pack2': 'Pack 2 - Videos Only ($20/day)', 
+        'pack3': 'Pack 3 - Complete Experience ($30/day)',
+        'analysis': 'Video Analysis Add-on ($10/day)'
+      };
+      return packageNames[packageId as keyof typeof packageNames] || packageId;
+    };
+
+    const handleSubmit = (e: React.FormEvent) => {
+      e.preventDefault();
+      
+      // Format the WhatsApp message
+      const message = `Hi Zak! I'd like to book a surf package at LaCrique Surf House.
+
+📦 Package Booking Details:
+👤 Name: ${formData.fullName}
+🌍 Country: ${formData.country}
+🗣️ Language: ${formData.language}
+📋 Package: ${getPackageName(formData.package)}
+👥 Number of People: ${formData.numberOfPeople}
+📅 Number of Days: ${formData.numberOfDays}
+🗓️ Start Date: ${formData.startDate}
+📝 Special Requests: ${formData.specialRequests || 'None'}
+
+Looking forward to an amazing surf experience with you!`;
+
+      // Encode the message for URL
+      const encodedMessage = encodeURIComponent(message);
+      
+      // Open WhatsApp with the message
+      window.open(`https://wa.me/212671142448?text=${encodedMessage}`, '_blank');
+      
+      // Close the form
+      setShowBookingForm(false);
+    };
+
+    return (
+      <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+        <div className="bg-white rounded-2xl p-8 max-w-md w-full max-h-[90vh] overflow-y-auto">
+          <div className="flex justify-between items-center mb-6">
+            <h3 className="text-2xl font-righteous font-bold text-gray-900">Book Package</h3>
+            <button
+              onClick={() => setShowBookingForm(false)}
+              className="text-gray-400 hover:text-gray-600"
+            >
+              ✕
+            </button>
+          </div>
+          
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+              <input
+                type="text"
+                name="fullName"
+                value={formData.fullName}
+                onChange={handleInputChange}
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                placeholder="Your full name"
+                required
+              />
+            </div>
+            
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Country</label>
+              <input
+                type="text"
+                name="country"
+                value={formData.country}
+                onChange={handleInputChange}
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                placeholder="Your country"
+                required
+              />
+            </div>
+            
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Language</label>
+              <select 
+                name="language"
+                value={formData.language}
+                onChange={handleInputChange}
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                required
+              >
+                <option value="">Select language</option>
+                <option value="english">English</option>
+                <option value="french">French</option>
+                <option value="arabic">Arabic</option>
+                <option value="spanish">Spanish</option>
+              </select>
+            </div>
+            
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Package</label>
+              <select 
+                name="package"
+                value={formData.package}
+                onChange={handleInputChange}
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                required
+              >
+                <option value="">Select package</option>
+                <option value="pack1">Pack 1 - Photos Only ($10/day)</option>
+                <option value="pack2">Pack 2 - Videos Only ($20/day)</option>
+                <option value="pack3">Pack 3 - Complete Experience ($30/day)</option>
+                <option value="analysis">Video Analysis Add-on ($10/day)</option>
+              </select>
+            </div>
+            
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Number of People</label>
+              <input
+                type="number"
+                name="numberOfPeople"
+                value={formData.numberOfPeople}
+                onChange={handleInputChange}
+                min="1"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                placeholder="Number of participants"
+                required
+              />
+            </div>
+            
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Number of Days</label>
+              <input
+                type="number"
+                name="numberOfDays"
+                value={formData.numberOfDays}
+                onChange={handleInputChange}
+                min="1"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                placeholder="How many days"
+                required
+              />
+            </div>
+            
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Start Date</label>
+              <input
+                type="date"
+                name="startDate"
+                value={formData.startDate}
+                onChange={handleInputChange}
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                required
+              />
+            </div>
+            
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Special Requests</label>
+              <textarea
+                name="specialRequests"
+                value={formData.specialRequests}
+                onChange={handleInputChange}
+                rows={3}
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                placeholder="Any specific requirements or preferences..."
+              ></textarea>
+            </div>
+            
+            <button
+              type="submit"
+              className="w-full btn-ocean"
+            >
+              Book Package
+            </button>
+          </form>
         </div>
-        
-        <form className="space-y-4">
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
-            <input
-              type="text"
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              placeholder="Your full name"
-            />
-          </div>
-          
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">Country</label>
-            <input
-              type="text"
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              placeholder="Your country"
-            />
-          </div>
-          
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">Language</label>
-            <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
-              <option value="">Select language</option>
-              <option value="english">English</option>
-              <option value="french">French</option>
-              <option value="arabic">Arabic</option>
-              <option value="spanish">Spanish</option>
-            </select>
-          </div>
-          
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">Package</label>
-            <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
-              <option value="">Select package</option>
-              <option value="pack1">Pack 1 - Photos Only ($10/day)</option>
-              <option value="pack2">Pack 2 - Videos Only ($20/day)</option>
-              <option value="pack3">Pack 3 - Complete Experience ($30/day)</option>
-              <option value="analysis">Video Analysis Add-on ($10/day)</option>
-            </select>
-          </div>
-          
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">Number of People</label>
-            <input
-              type="number"
-              min="1"
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              placeholder="Number of participants"
-            />
-          </div>
-          
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">Number of Days</label>
-            <input
-              type="number"
-              min="1"
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              placeholder="How many days"
-            />
-          </div>
-          
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">Start Date</label>
-            <input
-              type="date"
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-            />
-          </div>
-          
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">Special Requests</label>
-            <textarea
-              rows={3}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              placeholder="Any specific requirements or preferences..."
-            ></textarea>
-          </div>
-          
-          <button
-            type="submit"
-            className="w-full btn-ocean"
-          >
-            Book Package
-          </button>
-        </form>
       </div>
-    </div>
-  );
+    );
+  };
 
   return (
     <section id="packages" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
