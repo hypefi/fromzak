@@ -15,17 +15,17 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const quickLinks = [
-    { name: 'Photography Services', href: '#photography' },
-    { name: 'Surf Coaching', href: '#coaching' },
-    { name: 'Packages', href: '#packages' },
-    { name: 'About Zak', href: '#about' },
+    { name: 'Photography Services', href: '/photography' },
+    { name: 'Surf Coaching', href: '/coaching' },
+    { name: 'Packages', href: '/packages' },
+    { name: 'About Zak', href: '/about' },
   ];
 
   const services = [
-    { name: 'Private Photography', href: '#photography' },
-    { name: 'Group Sessions', href: '#photography' },
-    { name: 'Surf Coaching', href: '#coaching' },
-    { name: 'Morocco Surf Trips', href: '#trips' },
+    { name: 'Photography', href: '/photography' },
+    { name: 'Coaching', href: '/coaching' },
+    { name: 'Gallery', href: '/gallery' },
+    { name: 'Store', href: '/store' },
   ];
 
   return (
@@ -40,7 +40,7 @@ const Footer = () => {
                 <Waves className="h-7 w-7 text-white" />
               </div>
               <div>
-                <h3 className="font-righteous font-bold text-xl">Zak Radmi</h3>
+                <h3 className="font-righteous font-bold text-xl">Zakaria Radmi</h3>
                 <p className="text-blue-200 text-sm">Surf Photographer & Coach</p>
               </div>
             </div>
@@ -151,7 +151,7 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="flex items-center space-x-2 text-gray-300">
-              <span>&copy; {currentYear} Zak Radmi Photography & Coaching.</span>
+              <span>&copy; {currentYear} Zakaria Radmi Photography & Coaching.</span>
               <span className="hidden md:inline">All rights reserved.</span>
             </div>
             <div className="flex items-center space-x-2 text-gray-300">
