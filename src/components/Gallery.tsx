@@ -540,7 +540,9 @@ const Gallery = () => {
                 <span>Follow on Instagram</span>
               </a>
               <a
-                href="#photography"
+                href="https://wa.me/212671142448?text=Hi%20Zak!%20I%20saw%20your%20amazing%20surf%20photography%20gallery%20and%20would%20love%20to%20book%20a%20photography%20session.%20Can%20we%20discuss%20the%20details?"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center space-x-2 text-gray-700 border-2 border-gray-300 hover:border-gray-400 px-8 py-4 rounded-full font-medium hover:bg-gray-50 transition-all duration-300"
               >
                 <Camera className="h-5 w-5" />
