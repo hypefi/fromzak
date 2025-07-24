@@ -42,7 +42,7 @@ const Photography = () => {
     {
       type: 'Private Session',
       duration: '2 hours',
-      price: { mad: '300', eur: '100' },
+      price: { mad: '300', eur: '30' },
       description: 'One-on-one photography session with personalized attention',
       popular: true
     },
@@ -50,7 +50,7 @@ const Photography = () => {
       type: 'Group Session',
       duration: '2 hours',
       minPeople: '5+',
-      price: { mad: '150', eur: '50' },
+      price: { mad: '150', eur: '15' },
       description: 'Perfect for groups of friends or surf schools',
       popular: false
     }
@@ -103,8 +103,8 @@ const Photography = () => {
             <label className="block text-sm font-medium text-gray-700 mb-2">Service Type</label>
             <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
               <option value="">Select service</option>
-              <option value="private">Private Session (€100)</option>
-              <option value="group">Group Session (€50/person)</option>
+              <option value="private">Private Session (300 DH / €30)</option>
+              <option value="group">Group Session (150 DH / €15 per person)</option>
               <option value="freelance">Freelance Photography</option>
               <option value="videography">Video Graphy</option>
             </select>
