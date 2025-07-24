@@ -13,7 +13,7 @@ const Hero = () => {
       description: "Experience the magic of surfing through stunning visuals that tell your unique story on the waves.",
       cta: "Book Photo Session",
       ctaLink: "#photography",
-      backgroundImage: "https://images.unsplash.com/photo-1502680390469-be75c86b636f?q=80&w=2070&auto=format&fit=crop"
+      backgroundImage: "/images/main/IMG_2110.JPG"
     },
     {
       title: "Master the Art of Surfing",
@@ -21,7 +21,7 @@ const Hero = () => {
       description: "Improve your surfing skills with personalized coaching sessions tailored to your level and goals.",
       cta: "Start Coaching",
       ctaLink: "#coaching",
-      backgroundImage: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=2070&auto=format&fit=crop"
+      backgroundImage: "/images/main/IMG_2115.JPG"
     },
     {
       title: "Morocco Surf Adventures",
@@ -29,7 +29,55 @@ const Hero = () => {
       description: "Discover the best surf spots, local culture, and hidden gems of Morocco's incredible coastline.",
       cta: "Plan Your Trip",
       ctaLink: "#contact",
-      backgroundImage: "https://images.unsplash.com/photo-1505142468610-359e7d316be0?q=80&w=2070&auto=format&fit=crop"
+      backgroundImage: "/images/main/IMG_2129 copy.JPG"
+    },
+    {
+      title: "Professional Photography",
+      subtitle: "Stunning surf imagery that captures the moment",
+      description: "From action shots to lifestyle portraits, we capture the essence of Morocco's surf culture.",
+      cta: "View Gallery",
+      ctaLink: "#gallery",
+      backgroundImage: "/images/main/IMG_2142.JPG"
+    },
+    {
+      title: "Surf Coaching Excellence",
+      subtitle: "Take your surfing to the next level",
+      description: "Personalized instruction for all skill levels in the perfect waves of Morocco.",
+      cta: "Book Lesson",
+      ctaLink: "#coaching",
+      backgroundImage: "/images/main/IMG_2149.JPG"
+    },
+    {
+      title: "Atlantic Ocean Adventures",
+      subtitle: "Explore Morocco's stunning coastline",
+      description: "Join us for unforgettable surf sessions along Morocco's world-class surf breaks.",
+      cta: "Start Adventure",
+      ctaLink: "#contact",
+      backgroundImage: "/images/main/IMG_2150.JPG"
+    },
+    {
+      title: "Surf Culture Morocco",
+      subtitle: "Immerse yourself in local surf culture",
+      description: "Experience authentic Moroccan hospitality combined with world-class surfing conditions.",
+      cta: "Learn More",
+      ctaLink: "#about",
+      backgroundImage: "/images/main/IMG_2155.JPG"
+    },
+    {
+      title: "Perfect Wave Moments",
+      subtitle: "Every wave tells a story",
+      description: "Capture your surfing journey with professional photography in Morocco's most beautiful locations.",
+      cta: "Book Session",
+      ctaLink: "#photography",
+      backgroundImage: "/images/main/IMG_2158.JPG"
+    },
+    {
+      title: "Endless Summer Vibes",
+      subtitle: "Year-round surfing paradise",
+      description: "Morocco offers consistent waves and perfect weather for your ultimate surf experience.",
+      cta: "Plan Visit",
+      ctaLink: "#packages",
+      backgroundImage: "/images/main/IMG_2195.JPG"
     }
   ];
 

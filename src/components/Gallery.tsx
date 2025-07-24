@@ -25,79 +25,408 @@ const Gallery = () => {
     { id: 'portraits', name: 'Portraits' }
   ];
 
-  // Placeholder gallery items with actual dimensions
+  // Real gallery items using actual images from /images/gallery/
   const galleryItems = [
+    // Action shots
     {
       id: 1,
       type: 'image',
       category: 'action',
       title: 'Perfect Barrel',
       description: 'Captured at Anchor Point, Taghazout',
-      thumbnail: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=400&h=600&fit=crop',
-      fullImage: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1200&h=800&fit=crop'
+      thumbnail: '/images/gallery/IMG_2104.JPG',
+      fullImage: '/images/gallery/IMG_2104.JPG'
     },
     {
       id: 2,
       type: 'image',
-      category: 'lifestyle',
-      title: 'Sunset Session',
-      description: 'Golden hour at Taghazout Beach',
-      thumbnail: 'https://images.unsplash.com/photo-1502680390469-be75c86b636f?w=400&h=600&fit=crop',
-      fullImage: 'https://images.unsplash.com/photo-1502680390469-be75c86b636f?w=1200&h=800&fit=crop'
+      category: 'action',
+      title: 'Air Time',
+      description: 'Aerial maneuver at Killer Point',
+      thumbnail: '/images/gallery/IMG_2105.JPG',
+      fullImage: '/images/gallery/IMG_2105.JPG'
     },
     {
       id: 3,
       type: 'image',
       category: 'action',
-      title: 'Air Time',
-      description: 'Aerial maneuver at Killer Point',
-      thumbnail: 'https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=400&h=600&fit=crop',
-      fullImage: 'https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=1200&h=800&fit=crop'
+      title: 'Powerful Wave',
+      description: 'Raw power of Moroccan waves',
+      thumbnail: '/images/gallery/IMG_2106.JPG',
+      fullImage: '/images/gallery/IMG_2106.JPG'
     },
     {
       id: 4,
       type: 'image',
-      category: 'portraits',
-      title: 'Local Surfer',
-      description: 'Portrait of a Moroccan surfer',
-      thumbnail: 'https://images.unsplash.com/photo-1530549387789-4c1017266635?w=400&h=600&fit=crop',
-      fullImage: 'https://images.unsplash.com/photo-1530549387789-4c1017266635?w=1200&h=800&fit=crop'
+      category: 'action',
+      title: 'Wave Riding',
+      description: 'Perfect form on the wave face',
+      thumbnail: '/images/gallery/IMG_2107.JPG',
+      fullImage: '/images/gallery/IMG_2107.JPG'
     },
     {
       id: 5,
       type: 'image',
-      category: 'competitions',
-      title: 'Competition Heat',
-      description: 'Local surf competition in Agadir',
-      thumbnail: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=400&h=600&fit=crop',
-      fullImage: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=1200&h=800&fit=crop'
+      category: 'action',
+      title: 'Surf Action',
+      description: 'Dynamic surf photography',
+      thumbnail: '/images/gallery/IMG_2110.JPG',
+      fullImage: '/images/gallery/IMG_2110.JPG'
     },
     {
       id: 6,
       type: 'image',
-      category: 'lifestyle',
-      title: 'Beach Life',
-      description: 'Capturing the essence of surf culture',
-      thumbnail: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400&h=600&fit=crop',
-      fullImage: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&h=800&fit=crop'
+      category: 'action',
+      title: 'Ocean Power',
+      description: 'Capturing the ocean\'s energy',
+      thumbnail: '/images/gallery/IMG_2111.JPG',
+      fullImage: '/images/gallery/IMG_2111.JPG'
     },
+    // Lifestyle shots
     {
       id: 7,
       type: 'image',
-      category: 'action',
-      title: 'Powerful Wave',
-      description: 'Raw power of Moroccan waves',
-      thumbnail: 'https://images.unsplash.com/photo-1483721310020-03333e577078?w=400&h=600&fit=crop',
-      fullImage: 'https://images.unsplash.com/photo-1483721310020-03333e577078?w=1200&h=800&fit=crop'
+      category: 'lifestyle',
+      title: 'Sunset Session',
+      description: 'Golden hour at Taghazout Beach',
+      thumbnail: '/images/gallery/IMG_2112.JPG',
+      fullImage: '/images/gallery/IMG_2112.JPG'
     },
     {
       id: 8,
       type: 'image',
       category: 'lifestyle',
+      title: 'Beach Life',
+      description: 'Capturing the essence of surf culture',
+      thumbnail: '/images/gallery/IMG_2113.JPG',
+      fullImage: '/images/gallery/IMG_2113.JPG'
+    },
+    {
+      id: 9,
+      type: 'image',
+      category: 'lifestyle',
       title: 'Morning Patrol',
       description: 'Dawn patrol session preparation',
-      thumbnail: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=600&fit=crop',
-      fullImage: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=1200&h=800&fit=crop'
+      thumbnail: '/images/gallery/IMG_2115.JPG',
+      fullImage: '/images/gallery/IMG_2115.JPG'
+    },
+    {
+      id: 10,
+      type: 'image',
+      category: 'lifestyle',
+      title: 'Surf Culture',
+      description: 'Life by the ocean',
+      thumbnail: '/images/gallery/IMG_2116.JPG',
+      fullImage: '/images/gallery/IMG_2116.JPG'
+    },
+    {
+      id: 11,
+      type: 'image',
+      category: 'lifestyle',
+      title: 'Ocean Vibes',
+      description: 'Living the surf lifestyle',
+      thumbnail: '/images/gallery/IMG_2126.JPG',
+      fullImage: '/images/gallery/IMG_2126.JPG'
+    },
+    {
+      id: 12,
+      type: 'image',
+      category: 'lifestyle',
+      title: 'Surf Spirit',
+      description: 'The essence of surfing',
+      thumbnail: '/images/gallery/IMG_2129.JPG',
+      fullImage: '/images/gallery/IMG_2129.JPG'
+    },
+    // Competition shots
+    {
+      id: 13,
+      type: 'image',
+      category: 'competitions',
+      title: 'Competition Heat',
+      description: 'Local surf competition in Agadir',
+      thumbnail: '/images/gallery/IMG_2134.JPG',
+      fullImage: '/images/gallery/IMG_2134.JPG'
+    },
+    {
+      id: 14,
+      type: 'image',
+      category: 'competitions',
+      title: 'Competitive Spirit',
+      description: 'High-performance surfing',
+      thumbnail: '/images/gallery/IMG_2137.JPG',
+      fullImage: '/images/gallery/IMG_2137.JPG'
+    },
+    {
+      id: 15,
+      type: 'image',
+      category: 'competitions',
+      title: 'Championship Moment',
+      description: 'Capturing the winning wave',
+      thumbnail: '/images/gallery/IMG_2139.JPG',
+      fullImage: '/images/gallery/IMG_2139.JPG'
+    },
+    {
+      id: 16,
+      type: 'image',
+      category: 'competitions',
+      title: 'Contest Action',
+      description: 'Professional surf competition',
+      thumbnail: '/images/gallery/IMG_2140.JPG',
+      fullImage: '/images/gallery/IMG_2140.JPG'
+    },
+    // Portrait shots
+    {
+      id: 17,
+      type: 'image',
+      category: 'portraits',
+      title: 'Local Surfer',
+      description: 'Portrait of a Moroccan surfer',
+      thumbnail: '/images/gallery/IMG_2142.JPG',
+      fullImage: '/images/gallery/IMG_2142.JPG'
+    },
+    {
+      id: 18,
+      type: 'image',
+      category: 'portraits',
+      title: 'Surf Personality',
+      description: 'Character behind the surfer',
+      thumbnail: '/images/gallery/IMG_2143.JPG',
+      fullImage: '/images/gallery/IMG_2143.JPG'
+    },
+    {
+      id: 19,
+      type: 'image',
+      category: 'portraits',
+      title: 'Ocean Soul',
+      description: 'Connected to the sea',
+      thumbnail: '/images/gallery/IMG_2146.JPG',
+      fullImage: '/images/gallery/IMG_2146.JPG'
+    },
+    {
+      id: 20,
+      type: 'image',
+      category: 'portraits',
+      title: 'Surfer Portrait',
+      description: 'Capturing the surfer\'s essence',
+      thumbnail: '/images/gallery/IMG_2147.JPG',
+      fullImage: '/images/gallery/IMG_2147.JPG'
+    },
+    // Additional mixed category images
+    {
+      id: 21,
+      type: 'image',
+      category: 'action',
+      title: 'Wave Power',
+      description: 'Nature\'s raw energy',
+      thumbnail: '/images/gallery/IMG_2148.JPG',
+      fullImage: '/images/gallery/IMG_2148.JPG'
+    },
+    {
+      id: 22,
+      type: 'image',
+      category: 'lifestyle',
+      title: 'Surf Session',
+      description: 'Perfect day on the water',
+      thumbnail: '/images/gallery/IMG_2150.JPG',
+      fullImage: '/images/gallery/IMG_2150.JPG'
+    },
+    {
+      id: 23,
+      type: 'image',
+      category: 'action',
+      title: 'Dynamic Motion',
+      description: 'Surfing in perfect harmony',
+      thumbnail: '/images/gallery/IMG_2152.JPG',
+      fullImage: '/images/gallery/IMG_2152.JPG'
+    },
+    {
+      id: 24,
+      type: 'image',
+      category: 'lifestyle',
+      title: 'Ocean Connection',
+      description: 'One with the waves',
+      thumbnail: '/images/gallery/IMG_2153.JPG',
+      fullImage: '/images/gallery/IMG_2153.JPG'
+    },
+    {
+      id: 25,
+      type: 'image',
+      category: 'portraits',
+      title: 'Surf Character',
+      description: 'Individual style and passion',
+      thumbnail: '/images/gallery/IMG_2154.JPG',
+      fullImage: '/images/gallery/IMG_2154.JPG'
+    },
+    {
+      id: 26,
+      type: 'image',
+      category: 'action',
+      title: 'Wave Mastery',
+      description: 'Technical surfing skills',
+      thumbnail: '/images/gallery/IMG_2158.JPG',
+      fullImage: '/images/gallery/IMG_2158.JPG'
+    },
+    {
+      id: 27,
+      type: 'image',
+      category: 'action',
+      title: 'Ocean Athletics',
+      description: 'Peak performance surfing',
+      thumbnail: '/images/gallery/IMG_2161.JPG',
+      fullImage: '/images/gallery/IMG_2161.JPG'
+    },
+    {
+      id: 28,
+      type: 'image',
+      category: 'lifestyle',
+      title: 'Surf Adventure',
+      description: 'Exploring Morocco\'s coast',
+      thumbnail: '/images/gallery/IMG_2162.JPG',
+      fullImage: '/images/gallery/IMG_2162.JPG'
+    },
+    {
+      id: 29,
+      type: 'image',
+      category: 'action',
+      title: 'Perfect Form',
+      description: 'Technique and style combined',
+      thumbnail: '/images/gallery/IMG_2163.JPG',
+      fullImage: '/images/gallery/IMG_2163.JPG'
+    },
+    {
+      id: 30,
+      type: 'image',
+      category: 'lifestyle',
+      title: 'Coastal Living',
+      description: 'Life by the Atlantic',
+      thumbnail: '/images/gallery/IMG_2171.JPG',
+      fullImage: '/images/gallery/IMG_2171.JPG'
+    },
+    {
+      id: 31,
+      type: 'image',
+      category: 'competitions',
+      title: 'Championship Wave',
+      description: 'Competition excellence',
+      thumbnail: '/images/gallery/IMG_2172.JPG',
+      fullImage: '/images/gallery/IMG_2172.JPG'
+    },
+    {
+      id: 32,
+      type: 'image',
+      category: 'action',
+      title: 'Surf Artistry',
+      description: 'Surfing as art form',
+      thumbnail: '/images/gallery/IMG_2173.JPG',
+      fullImage: '/images/gallery/IMG_2173.JPG'
+    },
+    {
+      id: 33,
+      type: 'image',
+      category: 'lifestyle',
+      title: 'Ocean Rhythm',
+      description: 'In tune with the waves',
+      thumbnail: '/images/gallery/IMG_2174.JPG',
+      fullImage: '/images/gallery/IMG_2174.JPG'
+    },
+    {
+      id: 34,
+      type: 'image',
+      category: 'action',
+      title: 'Wave Dance',
+      description: 'Grace and power united',
+      thumbnail: '/images/gallery/IMG_2175.JPG',
+      fullImage: '/images/gallery/IMG_2175.JPG'
+    },
+    {
+      id: 35,
+      type: 'image',
+      category: 'portraits',
+      title: 'Surf Identity',
+      description: 'Personal surf story',
+      thumbnail: '/images/gallery/IMG_2177.JPG',
+      fullImage: '/images/gallery/IMG_2177.JPG'
+    },
+    {
+      id: 36,
+      type: 'image',
+      category: 'action',
+      title: 'Pure Energy',
+      description: 'Unleashing surf potential',
+      thumbnail: '/images/gallery/IMG_2178.JPG',
+      fullImage: '/images/gallery/IMG_2178.JPG'
+    },
+    {
+      id: 37,
+      type: 'image',
+      category: 'lifestyle',
+      title: 'Surf Journey',
+      description: 'Adventure on the waves',
+      thumbnail: '/images/gallery/IMG_2179.JPG',
+      fullImage: '/images/gallery/IMG_2179.JPG'
+    },
+    {
+      id: 38,
+      type: 'image',
+      category: 'action',
+      title: 'Wave Warrior',
+      description: 'Conquering challenging waves',
+      thumbnail: '/images/gallery/IMG_2180.JPG',
+      fullImage: '/images/gallery/IMG_2180.JPG'
+    },
+    {
+      id: 39,
+      type: 'image',
+      category: 'competitions',
+      title: 'Contest Victory',
+      description: 'Winning moment captured',
+      thumbnail: '/images/gallery/IMG_2182.JPG',
+      fullImage: '/images/gallery/IMG_2182.JPG'
+    },
+    {
+      id: 40,
+      type: 'image',
+      category: 'lifestyle',
+      title: 'Surf Freedom',
+      description: 'Liberation through surfing',
+      thumbnail: '/images/gallery/IMG_2183.JPG',
+      fullImage: '/images/gallery/IMG_2183.JPG'
+    },
+    {
+      id: 41,
+      type: 'image',
+      category: 'portraits',
+      title: 'Ocean Guardian',
+      description: 'Protecting our waves',
+      thumbnail: '/images/gallery/IMG_2190.JPG',
+      fullImage: '/images/gallery/IMG_2190.JPG'
+    },
+    {
+      id: 42,
+      type: 'image',
+      category: 'lifestyle',
+      title: 'Surf Paradise',
+      description: 'Morocco\'s hidden gems',
+      thumbnail: '/images/gallery/IMG_2191.JPG',
+      fullImage: '/images/gallery/IMG_2191.JPG'
+    },
+    {
+      id: 43,
+      type: 'image',
+      category: 'action',
+      title: 'Perfect Moment',
+      description: 'Timing and technique',
+      thumbnail: '/images/gallery/IMG_2194.JPG',
+      fullImage: '/images/gallery/IMG_2194.JPG'
+    },
+    {
+      id: 44,
+      type: 'image',
+      category: 'lifestyle',
+      title: 'Endless Summer',
+      description: 'Living the dream in Morocco',
+      thumbnail: '/images/gallery/IMG_2195.JPG',
+      fullImage: '/images/gallery/IMG_2195.JPG'
     }
   ];
 

@@ -86,7 +86,7 @@ const About = () => {
             <div className="aspect-[4/5] rounded-3xl overflow-hidden bg-gradient-to-br from-blue-400 to-teal-500 p-1">
               <div className="w-full h-full rounded-3xl overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=600&fit=crop&crop=face"
+                  src="/images/profile/profile_zak.jpeg"
                   alt="Zak Radmi - Professional Surf Photographer and Coach"
                   className="w-full h-full object-cover"
                 />
