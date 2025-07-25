@@ -33,7 +33,7 @@ const Gallery = () => {
       type: 'image',
       category: 'action',
       title: 'Perfect Barrel',
-      description: 'Captured at Anchor Point, Bouznika',
+      description: 'Victor Bernardo, Ras Al Lafaa Point',
       thumbnail: '/images/gallery/IMG_2104.JPG',
       fullImage: '/images/gallery/IMG_2104.JPG'
     },
@@ -42,7 +42,7 @@ const Gallery = () => {
       type: 'image',
       category: 'action',
       title: 'Air Time',
-      description: 'Aerial maneuver at Killer Point',
+      description: 'Maneuver at Ras Al Lafaa Point',
       thumbnail: '/images/gallery/IMG_2105.JPG',
       fullImage: '/images/gallery/IMG_2105.JPG'
     },
@@ -88,7 +88,7 @@ const Gallery = () => {
       type: 'image',
       category: 'lifestyle',
       title: 'Sunset Session',
-      description: 'Golden hour at Bouznika Beach',
+      description: 'More manoeuvers by the goat',
       thumbnail: '/images/gallery/IMG_2112.JPG',
       fullImage: '/images/gallery/IMG_2112.JPG'
     },
@@ -141,8 +141,8 @@ const Gallery = () => {
     {
       id: 13,
       type: 'image',
-      category: 'competitions',
-      title: 'Competition Heat',
+      category: 'lifestyle',
+      title: 'Enjoying the surf',
       description: 'Local surf competition in Agadir',
       thumbnail: '/images/gallery/IMG_2134.JPG',
       fullImage: '/images/gallery/IMG_2134.JPG'
@@ -150,8 +150,8 @@ const Gallery = () => {
     {
       id: 14,
       type: 'image',
-      category: 'competitions',
-      title: 'Competitive Spirit',
+      category: 'lifestyle',
+      title: 'Enjoying the surf',
       description: 'High-performance surfing',
       thumbnail: '/images/gallery/IMG_2137.JPG',
       fullImage: '/images/gallery/IMG_2137.JPG'
@@ -160,7 +160,7 @@ const Gallery = () => {
       id: 15,
       type: 'image',
       category: 'competitions',
-      title: 'Championship Moment',
+      title: 'Happy Customer',
       description: 'Capturing the winning wave',
       thumbnail: '/images/gallery/IMG_2139.JPG',
       fullImage: '/images/gallery/IMG_2139.JPG'
@@ -168,8 +168,8 @@ const Gallery = () => {
     {
       id: 16,
       type: 'image',
-      category: 'competitions',
-      title: 'Contest Action',
+      category: 'portraits',
+      title: 'Ocean portraits',
       description: 'Professional surf competition',
       thumbnail: '/images/gallery/IMG_2140.JPG',
       fullImage: '/images/gallery/IMG_2140.JPG'
