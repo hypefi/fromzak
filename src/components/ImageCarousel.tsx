@@ -41,9 +41,12 @@ export default function ImageCarousel({ onStart }: ImageCarouselProps) {
   };
 
   return (
-    <div className={`fixed inset-0 z-50 transition-all duration-800 ${
+    <div className={`fixed inset-0 z-[9999] transition-all duration-800 ${
       isAnimating ? 'opacity-0 scale-110' : 'opacity-100 scale-100'
     }`}>
+      {/* Solid background to prevent any bleed-through */}
+      <div className="absolute inset-0 bg-black" />
+      
       {/* Background Images */}
       <div className="absolute inset-0">
         {images.map((src, index) => (
