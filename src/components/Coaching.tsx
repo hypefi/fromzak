@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Waves, User, Clock, Euro, Star, Trophy, Target, CheckCircle } from 'lucide-react';
+import { Waves, User, Clock, Euro, Trophy, Target, CheckCircle } from 'lucide-react';
 
 const Coaching = () => {
   const [showBookingForm, setShowBookingForm] = useState(false);
@@ -218,7 +218,7 @@ Looking forward to hearing from you!`;
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Professional surf coaching with years of experience. From beginners to advanced surfers, 
-            I'll help you improve your technique and confidence in the water.
+            I&apos;ll help you improve your technique and confidence in the water.
           </p>
         </div>
 

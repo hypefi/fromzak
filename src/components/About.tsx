@@ -1,5 +1,5 @@
 import React from 'react';
-import { Award, Camera, Waves, MapPin, Star, Users, Clock, Target } from 'lucide-react';
+import { Camera, Waves, MapPin, Star, Users, Target } from 'lucide-react';
 
 const About = () => {
   const achievements = [
@@ -111,8 +111,8 @@ const About = () => {
             
             <div className="space-y-4 text-gray-700 leading-relaxed">
               <p>
-                My name is Zakaria Radmi, I'm 20 years old, I'm a photographer, surfer and coach, born and raised by the ocean.
-                Since I was little, I've always had a passion for images, movement and emotions. Today, I'm lucky to live between these three worlds — capturing real moments, sharing my knowledge and motivating others to step out of their comfort zone.
+                My name is Zakaria Radmi, I&apos;m 20 years old, I&apos;m a photographer, surfer and coach, born and raised by the ocean.
+                Since I was little, I&apos;ve always had a passion for images, movement and emotions. Today, I&apos;m lucky to live between these three worlds — capturing real moments, sharing my knowledge and motivating others to step out of their comfort zone.
               </p>
               
               <p>
@@ -120,7 +120,7 @@ const About = () => {
               </p>
               
               <p>
-                As a coach, I help those who want to learn to surf, progress technically, but also reconnect with themselves and the ocean. Because yes, catching your first wave isn't just a matter of technique — it's also a story of confidence, sensations, listening. I work as much on technique as on the mental and feeling aspects.
+                As a coach, I help those who want to learn to surf, progress technically, but also reconnect with themselves and the ocean. Because yes, catching your first wave isn&apos;t just a matter of technique — it&apos;s also a story of confidence, sensations, listening. I work as much on technique as on the mental and feeling aspects.
               </p>
 
               <p>
@@ -130,7 +130,7 @@ const About = () => {
               <p>
                 I created this site to bring together a community of people as passionate as me.
                 Whether you come for a photo, a surf lesson, or just to share a vibe, welcome to my universe.
-                Let's go 🌊📸
+                Let&apos;s go 🌊📸
               </p>
             </div>
 
@@ -223,9 +223,9 @@ const About = () => {
               My Philosophy
             </h3>
             <blockquote className="text-2xl italic text-gray-700 leading-relaxed mb-8">
-              "I believe that every person has their own unique energy and light. My mission is to capture 
+              &quot;I believe that every person has their own unique energy and light. My mission is to capture 
               that authenticity — whether through the lens or in the water — and help people connect with 
-              their true selves and the ocean."
+              their true selves and the ocean.&quot;
             </blockquote>
             <div className="flex justify-center">
               <div className="flex items-center space-x-4">

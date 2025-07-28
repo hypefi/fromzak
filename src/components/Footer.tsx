@@ -3,11 +3,8 @@ import Link from 'next/link';
 import { 
   Instagram, 
   Phone, 
-  Mail, 
   MapPin, 
   Waves, 
-  Camera, 
-  Users, 
   Heart 
 } from 'lucide-react';
 

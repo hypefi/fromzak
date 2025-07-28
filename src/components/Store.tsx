@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { ShoppingCart, Shirt, Camera, Coffee, Package, Star, Plus, Minus } from 'lucide-react';
+import { ShoppingCart, Camera, Package, Star, Plus, Minus } from 'lucide-react';
 
 interface Product {
   id: number;
@@ -132,7 +132,7 @@ const Store = () => {
             Surf Lifestyle Collection
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Take home a piece of Morocco's surf culture with our exclusive collection of apparel, 
+            Take home a piece of Morocco&apos;s surf culture with our exclusive collection of apparel, 
             prints, and accessories featuring original photography.
           </p>
         </div>

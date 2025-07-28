@@ -1,10 +1,9 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Camera, Users, Clock, Euro, DollarSign, Star, Calendar, ArrowRight } from 'lucide-react';
+import { Camera, Users, Clock, Euro, Star, ArrowRight } from 'lucide-react';
 
 const Photography = () => {
-  const [selectedService, setSelectedService] = useState('');
   const [showBookingForm, setShowBookingForm] = useState(false);
 
   const photographyServices = [

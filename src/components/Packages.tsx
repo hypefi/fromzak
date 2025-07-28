@@ -1,10 +1,9 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Camera, Video, BarChart3, Play, CheckCircle, Star, Users, Clock } from 'lucide-react';
+import { Camera, Video, BarChart3, CheckCircle, Star, Users, Clock } from 'lucide-react';
 
 const Packages = () => {
-  const [selectedPackage, setSelectedPackage] = useState('');
   const [showBookingForm, setShowBookingForm] = useState(false);
 
   const packages = [

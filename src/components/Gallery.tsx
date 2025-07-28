@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Camera, Play, Eye, X, ChevronLeft, ChevronRight, Instagram } from 'lucide-react';
+import { Camera, Eye, X, ChevronLeft, ChevronRight, Instagram } from 'lucide-react';
 
 interface GalleryItem {
   id: number;
@@ -471,7 +471,7 @@ const Gallery = () => {
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Explore a collection of stunning surf photography showcasing the beauty, power, and culture 
-            of Morocco's incredible surf scene.
+            of Morocco&apos;s incredible surf scene.
           </p>
         </div>
 

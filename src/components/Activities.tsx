@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { Camera } from 'lucide-react';
 
 const Activities = () => {
@@ -12,8 +13,8 @@ const Activities = () => {
               Want to Collaborate?
             </h3>
             <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-              Whether you're organizing a surf event, need professional photography services, 
-              or want to partner with us, we'd love to hear from you.
+              Whether you&apos;re organizing a surf event, need professional photography services, 
+              or want to partner with us, we&apos;d love to hear from you.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
               <a
@@ -24,13 +25,13 @@ const Activities = () => {
               >
                 Get in Touch
               </a>
-              <a
+              <Link
                 href="/"
                 className="inline-flex items-center space-x-2 text-gray-700 border-2 border-gray-300 hover:border-gray-400 px-8 py-4 rounded-full font-medium hover:bg-white transition-all duration-300"
               >
                 <Camera className="h-5 w-5" />
                 <span>View Services</span>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
