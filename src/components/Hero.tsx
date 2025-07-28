@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
+import Link from 'next/link';
 import { Camera, Waves, MapPin, Star, ArrowRight, Play } from 'lucide-react';
 
 const Hero = () => {
@@ -12,7 +13,7 @@ const Hero = () => {
       subtitle: "Professional surf photography in the heart of Morocco",
       description: "Experience the magic of surfing through stunning visuals that tell your unique story on the waves.",
       cta: "Book Photo Session",
-      ctaLink: "#photography",
+      ctaLink: "/photography",
       backgroundImage: "/images/main/IMG_2110.JPG"
     },
     {
@@ -20,7 +21,7 @@ const Hero = () => {
       subtitle: "Expert coaching with years of experience",
       description: "Improve your surfing skills with personalized coaching sessions tailored to your level and goals.",
       cta: "Start Coaching",
-      ctaLink: "#coaching",
+      ctaLink: "/coaching",
       backgroundImage: "/images/main/IMG_2115.JPG"
     },
     {
@@ -28,7 +29,7 @@ const Hero = () => {
       subtitle: "Your complete surf trip guide",
       description: "Discover the best surf spots, local culture, and hidden gems of Morocco's incredible coastline.",
       cta: "Plan Your Trip",
-      ctaLink: "#contact",
+      ctaLink: "/contact",
       backgroundImage: "/images/main/IMG_2129 copy.JPG"
     },
     {
@@ -36,7 +37,7 @@ const Hero = () => {
       subtitle: "Stunning surf imagery that captures the moment",
       description: "From action shots to lifestyle portraits, we capture the essence of Morocco's surf culture.",
       cta: "View Gallery",
-      ctaLink: "#gallery",
+      ctaLink: "/gallery",
       backgroundImage: "/images/main/IMG_2142.JPG"
     },
     {
@@ -44,7 +45,7 @@ const Hero = () => {
       subtitle: "Take your surfing to the next level",
       description: "Personalized instruction for all skill levels in the perfect waves of Morocco.",
       cta: "Book Lesson",
-      ctaLink: "#coaching",
+      ctaLink: "/coaching",
       backgroundImage: "/images/main/IMG_2149.JPG"
     },
     {
@@ -52,15 +53,15 @@ const Hero = () => {
       subtitle: "Explore Morocco's stunning coastline",
       description: "Join us for unforgettable surf sessions along Morocco's world-class surf breaks.",
       cta: "Start Adventure",
-      ctaLink: "#contact",
+      ctaLink: "/contact",
       backgroundImage: "/images/main/IMG_2150.JPG"
     },
     {
-      title: "Surf Culture Morocco",
+      title: "Discover Morocco's Coast",
       subtitle: "Immerse yourself in local surf culture",
       description: "Experience authentic Moroccan hospitality combined with world-class surfing conditions.",
       cta: "Learn More",
-      ctaLink: "#about",
+      ctaLink: "/about",
       backgroundImage: "/images/main/IMG_2155.JPG"
     },
     {
@@ -68,7 +69,7 @@ const Hero = () => {
       subtitle: "Every wave tells a story",
       description: "Capture your surfing journey with professional photography in Morocco's most beautiful locations.",
       cta: "Book Session",
-      ctaLink: "#photography",
+      ctaLink: "/photography",
       backgroundImage: "/images/main/IMG_2158.JPG"
     },
     {
@@ -76,7 +77,7 @@ const Hero = () => {
       subtitle: "Year-round surfing paradise",
       description: "Morocco offers consistent waves and perfect weather for your ultimate surf experience.",
       cta: "Plan Visit",
-      ctaLink: "#packages",
+      ctaLink: "/packages",
       backgroundImage: "/images/main/IMG_2195.JPG"
     }
   ];
@@ -152,13 +153,13 @@ const Hero = () => {
 
               {/* CTAs */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a
+                <Link
                   href={heroSlides[currentSlide].ctaLink}
                   className="btn-ocean inline-flex items-center group shadow-xl"
                 >
                   <span>{heroSlides[currentSlide].cta}</span>
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                </a>
+                </Link>
                 
                 <button className="flex items-center space-x-2 glass-effect backdrop-blur-md bg-white/20 text-white px-6 py-3 rounded-full hover:bg-white/30 transition-all duration-300 shadow-lg">
                   <Play className="h-5 w-5" />
