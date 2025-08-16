@@ -237,24 +237,24 @@ Looking forward to capturing amazing surf moments with you!`;
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-16">
           {photographyServices.map((service) => {
             const IconComponent = service.icon;
             return (
-              <div key={service.id} className="card-surf p-6">
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-teal-500 rounded-xl flex items-center justify-center mb-4">
-                  <IconComponent className="h-6 w-6 text-white" />
+              <div key={service.id} className="card-surf p-4 sm:p-6">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-blue-500 to-teal-500 rounded-xl flex items-center justify-center mb-3 sm:mb-4">
+                  <IconComponent className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
                 </div>
-                <h3 className="font-righteous font-semibold text-xl text-gray-900 mb-3">
+                <h3 className="font-righteous font-semibold text-lg sm:text-xl text-gray-900 mb-2 sm:mb-3">
                   {service.title}
                 </h3>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-600 mb-3 sm:mb-4 text-sm sm:text-base">
                   {service.description}
                 </p>
                 <ul className="space-y-2">
                   {service.features.map((feature, index) => (
-                    <li key={index} className="flex items-center text-sm text-gray-500">
-                      <div className="w-1.5 h-1.5 bg-teal-500 rounded-full mr-3"></div>
+                    <li key={index} className="flex items-center text-xs sm:text-sm text-gray-500">
+                      <div className="w-1.5 h-1.5 bg-teal-500 rounded-full mr-2 sm:mr-3 flex-shrink-0"></div>
                       {feature}
                     </li>
                   ))}

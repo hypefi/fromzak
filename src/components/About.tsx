@@ -78,10 +78,10 @@ const About = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-16 lg:mb-20">
           {/* Image */}
-          <div className="relative">
-            <div className="aspect-[4/5] rounded-3xl overflow-hidden bg-gradient-to-br from-blue-400 to-teal-500 p-1">
+          <div className="relative order-2 lg:order-1">
+            <div className="aspect-[4/5] max-w-sm mx-auto lg:max-w-none rounded-3xl overflow-hidden bg-gradient-to-br from-blue-400 to-teal-500 p-1">
               <div className="w-full h-full rounded-3xl overflow-hidden">
                 <img
                   src="/images/profile/profile_zak.jpeg"
@@ -91,22 +91,22 @@ const About = () => {
               </div>
             </div>
             {/* Floating elements */}
-            <div className="absolute -top-6 -right-6 w-24 h-24 bg-gradient-to-r from-orange-400 to-red-500 rounded-full flex items-center justify-center floating-animation">
-              <Camera className="h-10 w-10 text-white" />
+            <div className="absolute -top-4 -right-4 lg:-top-6 lg:-right-6 w-16 h-16 lg:w-24 lg:h-24 bg-gradient-to-r from-orange-400 to-red-500 rounded-full flex items-center justify-center floating-animation">
+              <Camera className="h-6 w-6 lg:h-10 lg:w-10 text-white" />
             </div>
-            <div className="absolute -bottom-6 -left-6 w-20 h-20 bg-gradient-to-r from-teal-400 to-blue-500 rounded-full flex items-center justify-center floating-animation" style={{ animationDelay: '2s' }}>
-              <Waves className="h-8 w-8 text-white" />
+            <div className="absolute -bottom-4 -left-4 lg:-bottom-6 lg:-left-6 w-14 h-14 lg:w-20 lg:h-20 bg-gradient-to-r from-teal-400 to-blue-500 rounded-full flex items-center justify-center floating-animation" style={{ animationDelay: '2s' }}>
+              <Waves className="h-6 w-6 lg:h-8 lg:w-8 text-white" />
             </div>
           </div>
 
           {/* Content */}
-          <div className="space-y-6">
-            <h3 className="font-righteous font-bold text-3xl text-gray-900">
+          <div className="space-y-6 order-1 lg:order-2 text-center lg:text-left">
+            <h3 className="font-righteous font-bold text-2xl sm:text-3xl text-gray-900">
               Zakaria Radmi
             </h3>
-            <div className="flex items-center space-x-2 text-teal-600">
+            <div className="flex items-center justify-center lg:justify-start space-x-2 text-teal-600">
               <MapPin className="h-5 w-5" />
-              <span className="font-medium">20 years old • Based in Bouznika, Morocco</span>
+              <span className="font-medium text-sm sm:text-base">20 years old • Based in Bouznika, Morocco</span>
             </div>
             
             <div className="space-y-4 text-gray-700 leading-relaxed">
@@ -152,21 +152,21 @@ const About = () => {
         </div>
 
         {/* Achievements */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-16 lg:mb-20">
           {achievements.map((achievement, index) => {
             const IconComponent = achievement.icon;
             return (
               <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-teal-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <IconComponent className="h-8 w-8 text-white" />
+                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-blue-500 to-teal-500 rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                  <IconComponent className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
                 </div>
-                <div className="font-righteous font-bold text-3xl text-gray-900 mb-2">
+                <div className="font-righteous font-bold text-2xl sm:text-3xl text-gray-900 mb-2">
                   {achievement.number}
                 </div>
-                <div className="font-semibold text-gray-900 mb-1">
+                <div className="font-semibold text-gray-900 mb-1 text-sm sm:text-base">
                   {achievement.label}
                 </div>
-                <div className="text-sm text-gray-600">
+                <div className="text-xs sm:text-sm text-gray-600">
                   {achievement.description}
                 </div>
               </div>

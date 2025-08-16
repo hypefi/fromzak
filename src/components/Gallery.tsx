@@ -476,12 +476,12 @@ const Gallery = () => {
         </div>
 
         {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        <div className="flex flex-wrap justify-center gap-2 sm:gap-4 mb-12 px-4">
           {categories.map((category) => (
             <button
               key={category.id}
               onClick={() => setSelectedCategory(category.id)}
-              className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+              className={`px-4 sm:px-6 py-2 sm:py-3 rounded-full font-medium transition-all duration-300 text-sm sm:text-base ${
                 selectedCategory === category.id
                   ? 'bg-gradient-to-r from-blue-600 to-teal-600 text-white shadow-lg'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -493,11 +493,11 @@ const Gallery = () => {
         </div>
 
         {/* Gallery Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-16">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 sm:gap-4 lg:gap-6 mb-16">
           {filteredItems.map((item) => (
             <div
               key={item.id}
-              className="group relative overflow-hidden rounded-2xl aspect-[3/4] cursor-pointer"
+              className="group relative overflow-hidden rounded-xl sm:rounded-2xl aspect-[3/4] cursor-pointer"
               onClick={() => openLightbox(item)}
             >
               <img
@@ -506,13 +506,13 @@ const Gallery = () => {
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
-                  <h3 className="font-righteous font-semibold text-lg mb-1">{item.title}</h3>
-                  <p className="text-sm opacity-90">{item.description}</p>
+                <div className="absolute bottom-0 left-0 right-0 p-2 sm:p-4 text-white">
+                  <h3 className="font-righteous font-semibold text-sm sm:text-lg mb-1">{item.title}</h3>
+                  <p className="text-xs sm:text-sm opacity-90 line-clamp-2">{item.description}</p>
                 </div>
-                <div className="absolute top-4 right-4">
-                  <div className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
-                    <Eye className="h-5 w-5 text-white" />
+                <div className="absolute top-2 sm:top-4 right-2 sm:right-4">
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                    <Eye className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
                   </div>
                 </div>
               </div>
@@ -555,28 +555,28 @@ const Gallery = () => {
 
       {/* Lightbox */}
       {selectedImage && (
-        <div className="fixed inset-0 bg-black/90 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-          <div className="relative max-w-6xl max-h-[90vh] w-full">
+        <div className="fixed inset-0 bg-black/90 backdrop-blur-sm z-50 flex items-center justify-center p-2 sm:p-4">
+          <div className="relative max-w-6xl max-h-[95vh] sm:max-h-[90vh] w-full">
             {/* Close button */}
             <button
               onClick={closeLightbox}
-              className="absolute -top-12 right-0 text-white hover:text-gray-300 transition-colors"
+              className="absolute -top-8 sm:-top-12 right-0 text-white hover:text-gray-300 transition-colors z-20"
             >
-              <X className="h-8 w-8" />
+              <X className="h-6 w-6 sm:h-8 sm:w-8" />
             </button>
 
             {/* Navigation buttons */}
             <button
               onClick={() => navigateImage('prev')}
-              className="absolute left-4 top-1/2 -translate-y-1/2 text-white hover:text-gray-300 transition-colors z-10"
+              className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 text-white hover:text-gray-300 transition-colors z-10 bg-black/20 rounded-full p-2"
             >
-              <ChevronLeft className="h-8 w-8" />
+              <ChevronLeft className="h-6 w-6 sm:h-8 sm:w-8" />
             </button>
             <button
               onClick={() => navigateImage('next')}
-              className="absolute right-4 top-1/2 -translate-y-1/2 text-white hover:text-gray-300 transition-colors z-10"
+              className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 text-white hover:text-gray-300 transition-colors z-10 bg-black/20 rounded-full p-2"
             >
-              <ChevronRight className="h-8 w-8" />
+              <ChevronRight className="h-6 w-6 sm:h-8 sm:w-8" />
             </button>
 
             {/* Image */}
@@ -584,11 +584,11 @@ const Gallery = () => {
               <img
                 src={selectedImage.fullImage}
                 alt={selectedImage.title}
-                className="max-w-full max-h-[80vh] object-contain mx-auto rounded-lg"
+                className="max-w-full max-h-[75vh] sm:max-h-[80vh] object-contain mx-auto rounded-lg"
               />
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6 text-white rounded-b-lg">
-                <h3 className="font-righteous font-bold text-2xl mb-2">{selectedImage.title}</h3>
-                <p className="text-gray-200">{selectedImage.description}</p>
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-3 sm:p-6 text-white rounded-b-lg">
+                <h3 className="font-righteous font-bold text-lg sm:text-2xl mb-1 sm:mb-2">{selectedImage.title}</h3>
+                <p className="text-gray-200 text-sm sm:text-base">{selectedImage.description}</p>
               </div>
             </div>
           </div>

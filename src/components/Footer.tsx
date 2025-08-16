@@ -28,20 +28,20 @@ const Footer = () => {
   return (
     <footer className="bg-gradient-to-br from-slate-900 via-blue-900 to-teal-900 text-white">
       {/* Main Footer Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand Section */}
-          <div className="lg:col-span-1">
-            <div className="flex items-center space-x-3 mb-6">
-              <div className="flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-blue-500 to-teal-500">
-                <Waves className="h-7 w-7 text-white" />
+          <div className="lg:col-span-1 sm:col-span-2 lg:col-span-1">
+            <div className="flex items-center space-x-3 mb-4 sm:mb-6">
+              <div className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gradient-to-r from-blue-500 to-teal-500">
+                <Waves className="h-5 w-5 sm:h-7 sm:w-7 text-white" />
               </div>
               <div>
-                <h3 className="font-righteous font-bold text-xl">Zakaria Radmi</h3>
-                <p className="text-blue-200 text-sm">Surf Photographer & Coach</p>
+                <h3 className="font-righteous font-bold text-lg sm:text-xl">Zakaria Radmi</h3>
+                <p className="text-blue-200 text-xs sm:text-sm">Surf Photographer & Coach</p>
               </div>
             </div>
-            <p className="text-gray-300 mb-6 leading-relaxed">
+            <p className="text-gray-300 mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">
               Capturing the essence of surfing in Morocco through professional photography 
               and personalized coaching experiences. Your perfect wave awaits.
             </p>

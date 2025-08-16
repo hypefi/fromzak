@@ -72,12 +72,12 @@ export default function ImageCarousel({ onStart }: ImageCarouselProps) {
       <div className="absolute inset-0 bg-black/30" />
 
       {/* Content */}
-      <div className="relative h-full flex items-center justify-center">
-        <div className="text-center space-y-8">
+      <div className="relative h-full flex items-center justify-center px-4">
+        <div className="text-center space-y-6 sm:space-y-8">
           {/* Marine-styled Start Button */}
           <button
             onClick={handleStart}
-            className="group relative px-12 py-4 bg-transparent border-4 border-white text-white font-bold text-xl tracking-wider uppercase hover:bg-white hover:text-gray-900 transition-all duration-300 transform hover:scale-105 shadow-2xl"
+            className="group relative px-8 sm:px-12 py-3 sm:py-4 bg-transparent border-2 sm:border-4 border-white text-white font-bold text-lg sm:text-xl tracking-wider uppercase hover:bg-white hover:text-gray-900 transition-all duration-300 transform hover:scale-105 shadow-2xl"
             style={{
               fontFamily: 'var(--font-righteous)',
               letterSpacing: '0.15em',
@@ -89,10 +89,10 @@ export default function ImageCarousel({ onStart }: ImageCarouselProps) {
             <div className="absolute inset-0 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
             
             {/* Corner decorations */}
-            <div className="absolute top-0 left-0 w-4 h-4 border-t-4 border-l-4 border-white -translate-x-1 -translate-y-1" />
-            <div className="absolute top-0 right-0 w-4 h-4 border-t-4 border-r-4 border-white translate-x-1 -translate-y-1" />
-            <div className="absolute bottom-0 left-0 w-4 h-4 border-b-4 border-l-4 border-white -translate-x-1 translate-y-1" />
-            <div className="absolute bottom-0 right-0 w-4 h-4 border-b-4 border-r-4 border-white translate-x-1 translate-y-1" />
+            <div className="absolute top-0 left-0 w-3 h-3 sm:w-4 sm:h-4 border-t-2 border-l-2 sm:border-t-4 sm:border-l-4 border-white -translate-x-1 -translate-y-1" />
+            <div className="absolute top-0 right-0 w-3 h-3 sm:w-4 sm:h-4 border-t-2 border-r-2 sm:border-t-4 sm:border-r-4 border-white translate-x-1 -translate-y-1" />
+            <div className="absolute bottom-0 left-0 w-3 h-3 sm:w-4 sm:h-4 border-b-2 border-l-2 sm:border-b-4 sm:border-l-4 border-white -translate-x-1 translate-y-1" />
+            <div className="absolute bottom-0 right-0 w-3 h-3 sm:w-4 sm:h-4 border-b-2 border-r-2 sm:border-b-4 sm:border-r-4 border-white translate-x-1 translate-y-1" />
           </button>
 
           {/* Progress indicators */}
@@ -100,7 +100,7 @@ export default function ImageCarousel({ onStart }: ImageCarouselProps) {
             {images.map((_, index) => (
               <div
                 key={index}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                className={`w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full transition-all duration-300 ${
                   index === currentImageIndex 
                     ? 'bg-white scale-125' 
                     : 'bg-white/50'

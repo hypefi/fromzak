@@ -295,19 +295,19 @@ Looking forward to an amazing surf experience with you!`;
         </div>
 
         {/* Main Packages */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-16">
           {packages.map((pkg) => {
             const IconComponent = pkg.icon;
             return (
               <div
                 key={pkg.id}
                 className={`relative card-surf overflow-hidden ${
-                  pkg.popular ? 'scale-105 border-2 border-orange-500' : ''
+                  pkg.popular ? 'lg:scale-105 border-2 border-orange-500' : ''
                 }`}
               >
                 {pkg.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
-                    <span className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-2 rounded-full text-sm font-medium">
+                  <div className="absolute -top-3 sm:-top-4 left-1/2 transform -translate-x-1/2 z-10">
+                    <span className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-3 sm:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm font-medium">
                       Most Popular
                     </span>
                   </div>
@@ -315,38 +315,38 @@ Looking forward to an amazing surf experience with you!`;
                 
                 <div className={`h-2 bg-gradient-to-r ${pkg.color}`}></div>
                 
-                <div className="p-8">
-                  <div className="flex items-center space-x-3 mb-6">
-                    <div className={`w-12 h-12 bg-gradient-to-r ${pkg.color} rounded-xl flex items-center justify-center`}>
-                      <IconComponent className="h-6 w-6 text-white" />
+                <div className="p-4 sm:p-6 lg:p-8">
+                  <div className="flex items-start space-x-3 mb-4 sm:mb-6">
+                    <div className={`w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r ${pkg.color} rounded-xl flex items-center justify-center flex-shrink-0`}>
+                      <IconComponent className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
                     </div>
-                    <div>
-                      <h3 className="font-righteous font-bold text-xl text-gray-900">
+                    <div className="min-w-0 flex-1">
+                      <h3 className="font-righteous font-bold text-lg sm:text-xl text-gray-900 mb-1">
                         {pkg.name}
                       </h3>
-                      <p className="text-gray-600 text-sm">{pkg.description}</p>
+                      <p className="text-gray-600 text-xs sm:text-sm">{pkg.description}</p>
                     </div>
                   </div>
 
-                  <div className="text-center mb-6">
+                  <div className="text-center mb-4 sm:mb-6">
                     <div className="flex items-center justify-center space-x-1 mb-2">
-                      <span className="text-4xl font-bold text-gray-900">${pkg.price}</span>
+                      <span className="text-3xl sm:text-4xl font-bold text-gray-900">${pkg.price}</span>
                     </div>
-                    <p className="text-gray-600">{pkg.period}</p>
+                    <p className="text-gray-600 text-sm">{pkg.period}</p>
                   </div>
 
-                  <div className="space-y-3 mb-8">
+                  <div className="space-y-2 sm:space-y-3 mb-6 sm:mb-8">
                     {pkg.features.map((feature, index) => (
-                      <div key={index} className="flex items-start space-x-3">
-                        <CheckCircle className="h-5 w-5 text-teal-500 mt-0.5 flex-shrink-0" />
-                        <span className="text-gray-700 text-sm">{feature}</span>
+                      <div key={index} className="flex items-start space-x-2 sm:space-x-3">
+                        <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 text-teal-500 mt-0.5 flex-shrink-0" />
+                        <span className="text-gray-700 text-xs sm:text-sm">{feature}</span>
                       </div>
                     ))}
                   </div>
 
                   <button
                     onClick={() => setShowBookingForm(true)}
-                    className={`w-full py-3 rounded-full font-medium transition-all duration-300 ${
+                    className={`w-full py-3 rounded-full font-medium transition-all duration-300 text-sm sm:text-base ${
                       pkg.popular
                         ? 'btn-coral'
                         : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -419,40 +419,40 @@ Looking forward to an amazing surf experience with you!`;
 
         {/* Package Benefits */}
         <div className="mt-16 text-center">
-          <h3 className="font-righteous font-bold text-2xl text-gray-900 mb-8">
+          <h3 className="font-righteous font-bold text-xl sm:text-2xl text-gray-900 mb-6 sm:mb-8">
             Why Choose Our Packages?
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="h-8 w-8 text-white" />
+              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-blue-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                <Users className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
               </div>
-              <h4 className="font-righteous font-semibold text-lg text-gray-900 mb-2">
+              <h4 className="font-righteous font-semibold text-base sm:text-lg text-gray-900 mb-2">
                 Group Friendly
               </h4>
-              <p className="text-gray-600">
+              <p className="text-gray-600 text-sm sm:text-base">
                 Perfect for surf camps, friends, and group adventures
               </p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Clock className="h-8 w-8 text-white" />
+              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                <Clock className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
               </div>
-              <h4 className="font-righteous font-semibold text-lg text-gray-900 mb-2">
+              <h4 className="font-righteous font-semibold text-base sm:text-lg text-gray-900 mb-2">
                 All Day Coverage
               </h4>
-              <p className="text-gray-600">
+              <p className="text-gray-600 text-sm sm:text-base">
                 Comprehensive documentation throughout your surf day
               </p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Star className="h-8 w-8 text-white" />
+              <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                <Star className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
               </div>
-              <h4 className="font-righteous font-semibold text-lg text-gray-900 mb-2">
+              <h4 className="font-righteous font-semibold text-base sm:text-lg text-gray-900 mb-2">
                 Professional Quality
               </h4>
-              <p className="text-gray-600">
+              <p className="text-gray-600 text-sm sm:text-base">
                 High-end equipment and expert editing for stunning results
               </p>
             </div>

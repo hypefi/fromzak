@@ -96,12 +96,12 @@ Looking forward to hearing from you!`;
 
     return (
       <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-        <div className="bg-white rounded-2xl p-8 max-w-md w-full max-h-[90vh] overflow-y-auto">
-          <div className="flex justify-between items-center mb-6">
-            <h3 className="text-2xl font-righteous font-bold text-gray-900">Book Coaching Session</h3>
+        <div className="bg-white rounded-2xl p-4 sm:p-8 max-w-md w-full max-h-[95vh] sm:max-h-[90vh] overflow-y-auto">
+          <div className="flex justify-between items-center mb-4 sm:mb-6">
+            <h3 className="text-lg sm:text-2xl font-righteous font-bold text-gray-900">Book Coaching Session</h3>
             <button
               onClick={() => setShowBookingForm(false)}
-              className="text-gray-400 hover:text-gray-600"
+              className="text-gray-400 hover:text-gray-600 text-xl sm:text-base"
             >
               ✕
             </button>
@@ -223,18 +223,18 @@ Looking forward to hearing from you!`;
         </div>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-16">
           {coachingFeatures.map((feature, index) => {
             const IconComponent = feature.icon;
             return (
               <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-teal-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <IconComponent className="h-8 w-8 text-white" />
+                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-teal-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                  <IconComponent className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
                 </div>
-                <h3 className="font-righteous font-semibold text-xl text-gray-900 mb-3">
+                <h3 className="font-righteous font-semibold text-lg sm:text-xl text-gray-900 mb-2 sm:mb-3">
                   {feature.title}
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-gray-600 text-sm sm:text-base">
                   {feature.description}
                 </p>
               </div>
@@ -244,26 +244,26 @@ Looking forward to hearing from you!`;
 
         {/* Skill Levels */}
         <div className="mb-16">
-          <h3 className="font-righteous font-bold text-3xl text-center text-gray-900 mb-12">
+          <h3 className="font-righteous font-bold text-2xl sm:text-3xl text-center text-gray-900 mb-8 sm:mb-12">
             Coaching for All Levels
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
             {skillLevels.map((skill, index) => (
               <div key={index} className="card-surf overflow-hidden">
                 <div className={`h-2 bg-gradient-to-r ${skill.color}`}></div>
-                <div className="p-6">
-                  <h4 className="font-righteous font-bold text-xl text-gray-900 mb-2">
+                <div className="p-4 sm:p-6">
+                  <h4 className="font-righteous font-bold text-lg sm:text-xl text-gray-900 mb-2">
                     {skill.level}
                   </h4>
-                  <p className="text-gray-600 mb-4">
+                  <p className="text-gray-600 mb-4 text-sm sm:text-base">
                     {skill.description}
                   </p>
                   <div className="space-y-2">
-                    <h5 className="font-medium text-gray-900">Focus Areas:</h5>
+                    <h5 className="font-medium text-gray-900 text-sm sm:text-base">Focus Areas:</h5>
                     {skill.focus.map((item, idx) => (
-                      <div key={idx} className="flex items-center space-x-2">
-                        <CheckCircle className="h-4 w-4 text-teal-500" />
-                        <span className="text-sm text-gray-600">{item}</span>
+                      <div key={idx} className="flex items-start space-x-2">
+                        <CheckCircle className="h-4 w-4 text-teal-500 mt-0.5 flex-shrink-0" />
+                        <span className="text-xs sm:text-sm text-gray-600">{item}</span>
                       </div>
                     ))}
                   </div>

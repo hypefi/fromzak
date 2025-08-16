@@ -90,7 +90,7 @@ const Hero = () => {
   }, [heroSlides.length]);
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 sm:pt-20 lg:pt-24">
       {/* Background Image Carousel */}
       <div className="absolute inset-0">
         {heroSlides.map((slide, index) => (
@@ -120,62 +120,62 @@ const Hero = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="max-w-4xl mx-auto">
           {/* Hero Content - Slides */}
-          <div className="min-h-[400px] flex items-center justify-center">
+          <div className="min-h-[400px] sm:min-h-[500px] flex items-center justify-center px-4">
             <div key={currentSlide} className="slide-up">
               {/* Stats Row */}
-              <div className="flex justify-center items-center space-x-8 mb-8">
-                <div className="flex items-center space-x-2 glass-effect px-4 py-2 rounded-full backdrop-blur-md bg-white/20">
-                  <Camera className="h-5 w-5 text-yellow-400" />
-                  <span className="text-white font-medium">10K+ Photos</span>
+              <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6 lg:gap-8 mb-8">
+                <div className="flex items-center space-x-2 glass-effect px-3 sm:px-4 py-2 rounded-full backdrop-blur-md bg-white/20">
+                  <Camera className="h-4 w-4 sm:h-5 sm:w-5 text-yellow-400" />
+                  <span className="text-white font-medium text-sm sm:text-base">10K+ Photos</span>
                 </div>
-                <div className="flex items-center space-x-2 glass-effect px-4 py-2 rounded-full backdrop-blur-md bg-white/20">
-                  <Waves className="h-5 w-5 text-blue-400" />
-                  <span className="text-white font-medium">500+ Sessions</span>
+                <div className="flex items-center space-x-2 glass-effect px-3 sm:px-4 py-2 rounded-full backdrop-blur-md bg-white/20">
+                  <Waves className="h-4 w-4 sm:h-5 sm:w-5 text-blue-400" />
+                  <span className="text-white font-medium text-sm sm:text-base">500+ Sessions</span>
                 </div>
-                <div className="flex items-center space-x-2 glass-effect px-4 py-2 rounded-full backdrop-blur-md bg-white/20">
-                  <MapPin className="h-5 w-5 text-green-400" />
-                  <span className="text-white font-medium">Morocco</span>
+                <div className="flex items-center space-x-2 glass-effect px-3 sm:px-4 py-2 rounded-full backdrop-blur-md bg-white/20">
+                  <MapPin className="h-4 w-4 sm:h-5 sm:w-5 text-green-400" />
+                  <span className="text-white font-medium text-sm sm:text-base">Morocco</span>
                 </div>
               </div>
 
               {/* Main Content */}
-              <h1 className="font-righteous font-bold text-4xl md:text-6xl lg:text-7xl text-white mb-6 leading-tight drop-shadow-lg">
+              <h1 className="font-righteous font-bold text-3xl sm:text-4xl md:text-6xl lg:text-7xl text-white mb-4 sm:mb-6 leading-tight drop-shadow-lg text-center">
                 {heroSlides[currentSlide].title}
               </h1>
               
-              <p className="text-xl md:text-2xl text-blue-100 mb-4 font-medium drop-shadow-md">
+              <p className="text-lg sm:text-xl md:text-2xl text-blue-100 mb-3 sm:mb-4 font-medium drop-shadow-md text-center">
                 {heroSlides[currentSlide].subtitle}
               </p>
               
-              <p className="text-lg text-blue-200 mb-8 max-w-2xl mx-auto leading-relaxed drop-shadow-md">
+              <p className="text-base sm:text-lg text-blue-200 mb-6 sm:mb-8 max-w-2xl mx-auto leading-relaxed drop-shadow-md text-center px-4">
                 {heroSlides[currentSlide].description}
               </p>
 
               {/* CTAs */}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-4">
                 <Link
                   href={heroSlides[currentSlide].ctaLink}
-                  className="btn-ocean inline-flex items-center group shadow-xl"
+                  className="btn-ocean inline-flex items-center group shadow-xl w-full sm:w-auto justify-center"
                 >
                   <span>{heroSlides[currentSlide].cta}</span>
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 
-                <button className="flex items-center space-x-2 glass-effect backdrop-blur-md bg-white/20 text-white px-6 py-3 rounded-full hover:bg-white/30 transition-all duration-300 shadow-lg">
+                <button className="flex items-center justify-center space-x-2 glass-effect backdrop-blur-md bg-white/20 text-white px-6 py-3 rounded-full hover:bg-white/30 transition-all duration-300 shadow-lg w-full sm:w-auto">
                   <Play className="h-5 w-5" />
                   <span className="font-medium">Watch Video</span>
                 </button>
               </div>
 
               {/* Social Proof */}
-              <div className="mt-12 flex justify-center">
-                <div className="flex items-center space-x-1 glass-effect backdrop-blur-md bg-white/20 px-6 py-3 rounded-full shadow-lg">
+              <div className="mt-8 sm:mt-12 flex justify-center px-4">
+                <div className="flex items-center space-x-1 glass-effect backdrop-blur-md bg-white/20 px-4 sm:px-6 py-3 rounded-full shadow-lg">
                   <div className="flex -space-x-2">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+                      <Star key={i} className="h-4 w-4 sm:h-5 sm:w-5 text-yellow-400 fill-current" />
                     ))}
                   </div>
-                  <span className="text-white font-medium ml-3">4.9/5 from 200+ clients</span>
+                  <span className="text-white font-medium ml-3 text-sm sm:text-base">4.9/5 from 100+ clients</span>
                 </div>
               </div>
             </div>
